@@ -1,4 +1,4 @@
-This repository is a compilation of BQN solutions to verious coding challenges. 
+This repository is a compilation of BQN solutions to verious coding challenges.
 
 ### Issues Identified
 

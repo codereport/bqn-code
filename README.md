@@ -13,5 +13,5 @@ This repository is a compilation of [BQN](mlochbaum.github.io/BQN) solutions to 
 
 ### TODOs
 
-* Put `Join` and `Split` in a Str module
+* Put `Join`, `Split`, `Words`, `Unwords` in a Str module
 * Think about putting `_Prior` or `_Roll` in a module

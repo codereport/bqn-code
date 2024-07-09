@@ -1,3 +1,5 @@
+# Link: https://theweeklychallenge.org/blog/perl-weekly-challenge-272/
+
 # Solution 1 (Explicit)
 ScoreOfString ← {+´|-´˘2↕'a'-˜𝕩}
 

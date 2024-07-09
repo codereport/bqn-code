@@ -1,4 +1,4 @@
-This repository is a compilation of BQN solutions to various coding challenges.
+This repository is a compilation of [BQN](mlochbaum.github.io/BQN) solutions to various coding challenges.
 
 ### Issues Identified
 

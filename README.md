@@ -1,5 +1,10 @@
 This repository is a compilation of [BQN](mlochbaum.github.io/BQN) solutions to various coding challenges.
 
+### Resources
+
+* [BQNPAD](https://bqnpad.mechanize.systems/)
+* [BQNCrate](https://mlochbaum.github.io/bqncrate/)
+
 ### Issues Identified
 
 * No simple split or partition (PWC 272.1)

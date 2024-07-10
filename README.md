@@ -11,5 +11,4 @@ This repository is a compilation of [BQN](mlochbaum.github.io/BQN) solutions to 
 
 ### TODOs
 
-* Put `_Tri` in a Modifier module
 * Think about putting `_Prior` or `_Roll` in a module

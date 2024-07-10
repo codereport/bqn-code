@@ -1,6 +1,6 @@
 # Link: https://theweeklychallenge.org/blog/perl-weekly-challenge-276
 
-_Tri ← {(<˘𝔽⌜˜𝕩)↓˜¨1+↕≠𝕩} # short for Triangle Product
+⟨_Tri⟩ ⇐ •Import "../lib/modifiers.bqn"
 
 CompleteDays ← +´·∾0=24|+_Tri
 

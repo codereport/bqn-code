@@ -1,6 +1,7 @@
 # Link: https://theweeklychallenge.org/blog/perl-weekly-challenge-273
 
-Round      ← ⌊0.5⊸+
+⟨Round⟩ ⇐ •Import "../lib/math.bqn"
+
 Percentage ← (Round 100×+´÷≠)=
 
 # Tests

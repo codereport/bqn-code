@@ -1,10 +1,6 @@
 # Link: https://theweeklychallenge.org/blog/perl-weekly-challenge-275
 
-Join    ← {(⊣∾𝕨∾⊢)´𝕩}
-Split   ← (¬-˜⊢×·+`»⊸>)∘≠⊔⊢ # from BQN Crate
-Words   ← ' '⊸Split
-Unwords ← ' '⊸Join
-Lower   ← +⟜(32×1="A["⊸⍋) # from BQN Crate
+⟨Lower, Words⟩ ⇐ •Import "../lib/string.bqn"
 
 CanType ← +´·¬·⌈´¨·∨˝=⌜⟜Words○Lower
 

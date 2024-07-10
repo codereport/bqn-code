@@ -1,5 +1,6 @@
+⟨Join⟩ ⇐ •Import "../lib/string.bqn"
+
 Chunk  ← {∘‿𝕨⥊𝕩}
-Join   ← {(⊣∾𝕨∾⊢)´𝕩}
 Rowify ← {"|"∾("|"Join𝕩)∾"|"}
 
 Table ← {

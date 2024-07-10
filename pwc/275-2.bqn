@@ -1,6 +1,6 @@
 # Link: https://theweeklychallenge.org/blog/perl-weekly-challenge-275
 
-IsDigit ← {⊑𝕩∊'0'+↕10}
+⟨IsDigit⟩ ⇐ •Import "../lib/string.bqn"
 
 ReplaceDigits ← {IsDigit𝕩?•BQN⥊𝕩;0}¨+{IsDigit𝕩?𝕨;𝕩}`
 

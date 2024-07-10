@@ -1,7 +1,7 @@
 # Link: https://theweeklychallenge.org/blog/perl-weekly-challenge-272/
 
-Join     ← {(⊣∾𝕨∾⊢)´𝕩}
-Split    ← (¬-˜⊢×·+`»⊸>)∘≠⊔⊢
+⟨Join, Split⟩ ⇐ •Import "../lib/string.bqn"
+
 DefangIp ← "[.]" Join '.' Split ⊢
 
 # Tests

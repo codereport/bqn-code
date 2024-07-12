@@ -22,6 +22,13 @@ This repository is a compilation of [BQN](mlochbaum.github.io/BQN) solutions to 
 * [BQNPAD](https://bqnpad.mechanize.systems/)
 * [BQNCrate](https://mlochbaum.github.io/bqncrate/)
 
+### Other Repositories (BQN%)
+
+* [LeetCode](https://github.com/codereport/LeetCode) (11.2%)
+* [top10](https://github.com/codereport/top10) (9.3%)
+* [Advent-of-Code-2023](https://github.com/codereport/Advent-of-Code-2023) (54.1%)
+* [array-language-comparisons](https://github.com/codereport/array-language-comparisons) (0.0%)
+
 ### Issues Identified
 
 * No n-wise reduction or prior (PWC 272.2)

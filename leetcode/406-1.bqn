@@ -2,7 +2,7 @@
 
 GetSmallestString ← { 𝕩{0=≠𝕩?𝕨;⌽⌾(2↑(⊑𝕩)⊸↓)𝕨}/(>∧≠○|)´˘2↕•BQN∘⥊¨ 𝕩 }
 
-# Tests 
+# Tests
 •Show GetSmallestString "45320" # 43520
 •Show GetSmallestString "001"   # 001
 •Show GetSmallestString "20"    # 02

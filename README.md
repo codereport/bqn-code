@@ -29,11 +29,3 @@ This repository is a compilation of [BQN](mlochbaum.github.io/BQN) solutions to 
 * [top10](https://github.com/codereport/top10) (9.3%)
 * [Advent-of-Code-2023](https://github.com/codereport/Advent-of-Code-2023) (54.1%)
 * [array-language-comparisons](https://github.com/codereport/array-language-comparisons) (0.0%)
-
-### Issues Identified
-
-* No n-wise reduction or prior (PWC 272.2)
-
-### TODOs
-
-* Think about putting `_Prior` or `_Roll` in a module

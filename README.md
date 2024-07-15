@@ -23,10 +23,10 @@ This repository is a compilation of [BQN](mlochbaum.github.io/BQN) solutions to 
 * [BQNCrate](https://mlochbaum.github.io/bqncrate/)
 * [bqn-libs](https://github.com/mlochbaum/bqn-libs)
 
-### Other Repositories (BQN%)
+### Other Repositories (BQN%/Rank)
 
-* [LeetCode](https://github.com/codereport/LeetCode) (11.7%)
-* [top10](https://github.com/codereport/top10) (9.9%)
-* [Advent-of-Code-2022](https://github.com/codereport/Advent-of-Code-2022) (35.9%)
-* [Advent-of-Code-2023](https://github.com/codereport/Advent-of-Code-2023) (54.1%)
+* [LeetCode](https://github.com/codereport/LeetCode) (11.7%/3)
+* [top10](https://github.com/codereport/top10) (9.9%/3)
+* [Advent-of-Code-2022](https://github.com/codereport/Advent-of-Code-2022) (42.5%/1)
+* [Advent-of-Code-2023](https://github.com/codereport/Advent-of-Code-2023) (54.1%/1)
 * [array-language-comparisons](https://github.com/codereport/array-language-comparisons) (0.0%)

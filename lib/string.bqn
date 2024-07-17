@@ -1,9 +1,9 @@
-⟨IsVowel,, IsDigit, Join, Lower, Split, Words, Unwords, Upper⟩⇐
+⟨IsVowel, IsDigit, Join, Lower, Split, Words, Unwords, Upper⟩⇐
 
 IsDigit ← {⊑𝕩∊'0'+↕10}
 IsVowel ← ∨´"aeiou"⊸=
-Lower   ← +⟜(32×1="A["⊸⍋)   # from BQN Crate
 Join    ← {(⊣∾𝕨∾⊢)´𝕩}
+Lower   ← +⟜(32×1="A["⊸⍋)   # from BQN Crate
 Split   ← (¬-˜⊢×·+`»⊸>)∘≠⊔⊢ # from BQN Crate
 Words   ← ' '⊸Split
 Unwords ← ' '⊸Join

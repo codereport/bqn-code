@@ -19,7 +19,7 @@ def source_file_name(type: str, N: int, i: int) -> str:
         case "pwc":      f = f"{N}-{i}.bqn"            # 273-1.bqn
         case "aoc/2022" \
            | "aoc/2023": f = f"day{zero_pad(N)}.bqn"   # day01.bqn
-        case "leetcode": f = f"{N // 10}-{N % 10}.bqn" # 403-1.bqn
+        case "leetcode": f = f"{'b' if bw else ''}{N // 10}-{N % 10}.bqn" # 403-1.bqn
     return f"{type}/{f}"
 
 def dest_file_name(type: str, i: int) -> str:
@@ -27,7 +27,7 @@ def dest_file_name(type: str, i: int) -> str:
         case "pwc":      return f"ch-{i}.bqn"                      # ch-1.bqn
         case "aoc/2022" \
            | "aoc/2023": return f"day{zero_pad(i)}.bqn"            # day01.bqn
-        case "leetcode": return f"0{N // 10}_Problem_{N % 10}.bqn" # 0403_Problem_1.bqn
+        case "leetcode": return f"{'B' if bw else ''}0{N // 10}_Problem_{N % 10}.bqn" # 0403_Problem_1.bqn
 
 def file_numbers(type: str, n: int):
     match type:
@@ -73,5 +73,6 @@ if __name__ == "__main__":
         if type not in valid_types:
             print(f"type must be in {valid_types}")
             sys.exit(1)
-        N = int(sys.argv[2])
+        bw = sys.argv[2][0] == 'b'
+        N = int(sys.argv[2][bw:])
         copy_and_modify_files(N, type)

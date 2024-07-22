@@ -25,7 +25,7 @@ This repository is a compilation of [BQN](mlochbaum.github.io/BQN) solutions to 
 
 ### Other Repositories (BQN%/Rank)
 
-* [LeetCode](https://github.com/codereport/LeetCode) (11.7%/3)
+* [LeetCode](https://github.com/codereport/LeetCode) (12.7%/3)
 * [top10](https://github.com/codereport/top10) (9.9%/3)
 * [Advent-of-Code-2022](https://github.com/codereport/Advent-of-Code-2022) (42.5%/1)
 * [Advent-of-Code-2023](https://github.com/codereport/Advent-of-Code-2023) (54.1%/1)

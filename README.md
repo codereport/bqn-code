@@ -30,3 +30,10 @@ This repository is a compilation of [BQN](mlochbaum.github.io/BQN) solutions to 
 * [Advent-of-Code-2022](https://github.com/codereport/Advent-of-Code-2022) (42.5%/1)
 * [Advent-of-Code-2023](https://github.com/codereport/Advent-of-Code-2023) (54.1%/1)
 * [array-language-comparisons](https://github.com/codereport/array-language-comparisons) (0.0%)
+
+### My Libraries (WIP)
+
+* [binary.bqn](https://github.com/codereport/bqn-code/blob/main/lib/binary.bqn)
+* [math.bqn](https://github.com/codereport/bqn-code/blob/main/lib/math.bqn)
+* [modifiers.bqn](https://github.com/codereport/bqn-code/blob/main/lib/modifiers.bqn)
+* [string.bqn](https://github.com/codereport/bqn-code/blob/main/lib/string.bqn)

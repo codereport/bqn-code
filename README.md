@@ -6,7 +6,7 @@
     <a href="https://lbesson.mit-license.org/" alt="MIT license">
         <img src="https://img.shields.io/badge/License-MIT-blue.svg" /></a>        
     <a href="mlochbaum.github.io/BQN">
-        <img src="https://img.shields.io/badge/BQN-1.0-ff69b4.svg"/></a>
+        <img src="https://img.shields.io/badge/BQN-0.7-ff69b4.svg"/></a>
     <a href="https://github.com/codereport?tab=followers" alt="GitHub followers">
         <img src="https://img.shields.io/github/followers/codereport.svg?style=social&label=Follow" /></a>
     <a href="https://GitHub.com/codereport/bqn-code/stargazers/" alt="GitHub stars">

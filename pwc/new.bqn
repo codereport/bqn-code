@@ -3,7 +3,7 @@
 nl ← ⟨@+10⟩
 
 CreateFiles ← {
-  content ← ∾´⥊"# Link: https://theweeklychallenge.org/blog/perl-weekly-challenge-"∾𝕩∾nl∾nl∾"F ← ⊢"∾nl∾nl∾"# Tests"∾nl
+  content ← "# Link: https://theweeklychallenge.org/blog/perl-weekly-challenge-"∾𝕩∾nl∾nl∾"F ← ⊢"∾nl∾nl∾"# Tests"∾nl
   •file.Chars⟜content¨ (∾⟜"-1.bqn"⋈∾⟜"-2.bqn")𝕩
 }
 

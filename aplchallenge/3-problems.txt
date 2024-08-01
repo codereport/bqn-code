@@ -1,0 +1,79 @@
+1: Existentialism
+Write a single line of APL that uses ∊ to show that each of the letters in the English alphabet 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' (← click to copy) is found in the text 'THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG' (← click to copy). The result should be 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1, that is, 26 1s.
+
+2: Comparing This to That
+Which comparison symbol will give 0 1 0 1 0 with 3 5 4 8 6 on its left and 3 4 5 3 9 on its right?
+
+In other words, which symbol would you place in the box ( ⎕ ) of the APL code 3 5 4 8 6 ⎕ 3 4 5 3 9 (← click to copy) so that the answer will be 0 1 0 1 0?
+
+3: Picky Picky
+Write a line of APL using ⊃ that will pick the 'G' from ('KEN' 'IVERSON')('DYALOG' 'APL') (← click to copy).
+
+4: Partition Condition
+Using ⊆, one of the comparison functions, and round brackets, write an expression that will cut the text 'THE QUICK BROWN FOX' into words at the space characters (' '). The answer should be
+
+┌───┬─────┬─────┬───┐
+│THE│QUICK│BROWN│FOX│
+└───┴─────┴─────┴───┘
+(Hint: You will need to use the text 'THE QUICK BROWN FOX' twice, so don’t forget that you can click on it to copy it.)
+
+5: You Can Scan!
+Which comparison function, when used with Scan and a right argument of 0 1 1 0 0 1 0 1 0 1 1 0, will give 0 1 0 0 0 1 1 0 0 1 0 0?
+
+In other words, which symbol would you place in the box ( ⎕ ) of the APL code ⎕\ 0 1 1 0 0 1 0 1 0 1 1 0 (← click to copy) so the expression gives 0 1 0 0 0 1 1 0 0 1 0 0?
+
+6: Leading Question
+Using Plus (+), Reduce (/), And (∧), Scan (\), Not (~), and Exists In (∊), write an APL expression that counts how many consonants (non-vowels) are at the beginning of the word 'SCHNITZELS' (← click to copy), before the first vowel (which is I).
+
+(Use 'AEIOU' as your list of vowels.)
+
+7: You Have My Word
+Using Pick (⊃) and your answer for Problem 4, write a function that takes a number n as its left argument and a text that has words (with spaces between them) as its right argument, and gives word number n from the text. For example:
+
+      1 {answer} 'THE QUICK BROWN FOX'
+THE
+
+      3 {answer} 'THE QUICK BROWN FOX'
+BROWN
+
+      5 {answer} '   EXTRA    SPACES DO NOT MATTER   '
+MATTER
+(The text will have at least n words.)
+
+8: Give Me a Break!
+Using Not (~), Exists In (∊) and Partition (⊆), write a function that takes a text on its right and a list of characters on its left and cuts the text at those characters. For example:
+
+      ':- ,()' {answer} 'THREE-CHARACTER ANIMALS: CAT,DOG,ELK,EEL (AND BAT)'
+┌─────┬─────────┬───────┬───┬───┬───┬───┬───┬───┐
+│THREE│CHARACTER│ANIMALS│CAT│DOG│ELK│EEL│AND│BAT│
+└─────┴─────────┴───────┴───┴───┴───┴───┴───┴───┘
+
+      ':/.?=' {answer} 'HTTPS://WWW.BLOOFO.COM:8080?NAME=VALUE'
+┌─────┬───┬──────┬───┬────┬────┬─────┐
+│HTTPS│WWW│BLOOFO│COM│8080│NAME│VALUE│
+└─────┴───┴──────┴───┴────┴────┴─────┘
+
+9: Turning up the Heat
+Write a function that describes a temperature given in degrees Fahrenheit: If the temperature is below 32 (you don’t need to handle negative temperatures) it is 'FREEZING', while if it is 32 or higher, but below 50, it is merely 'COLD'. From 50 it becomes 'CHILLY', then from 70 it is 'PLEASANT', from 85 it is 'HOT' and at or above 95 it is 'HELLISH'. For example:
+
+      {answer} 33
+COLD
+
+      {answer} 14
+FREEZING
+
+      {answer} 83
+PLEASANT
+
+10: Pick a Vowel
+Using the techniques you have learnt so far, write a function that takes a word as its right argument and gives the word’s first vowel as its answer. For example:
+
+      {answer} 'SPHRAGISTIC'
+A
+
+      {answer} 'SEAL'
+E
+
+      {answer} 'ICONOGRAPH'
+I
+(The given word will have at least one vowel. Use 'AEIOU' as your list of vowels.)

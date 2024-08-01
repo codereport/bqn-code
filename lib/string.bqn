@@ -2,7 +2,7 @@
  Split,   Words,   Unlines, Unwords, Upper⟩⇐
 
 IsDigit ← {⊑𝕩∊'0'+↕10}
-IsVowel ← ∨´"aeiou"⊸=
+IsVowel ← ∨´"aeiouAEIOU"⊸=
 Join    ← {(⊣∾𝕨∾⊢)´𝕩}
 Lower   ← +⟜(32×1="A["⊸⍋)   # from BQN Crate
 Split   ← (¬-˜⊢×·+`»⊸>)∘≠⊔⊢ # from BQN Crate

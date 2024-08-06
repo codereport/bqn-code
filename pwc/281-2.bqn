@@ -3,7 +3,7 @@
 Convert ← 48|-⟜'0'¨
 deltas  ← (⌽¨⊸∾)∾<˘2‿¯2⋈⌜1‿¯1
 IsValid ← ∧´1⊸≤∧8⊸≥
-Moves   ← {IsValid¨⊸/⥊𝕩+⌜deltas}
+Moves   ← IsValid¨⊸/·⥊deltas+⌜⊢
 
 MinKnightMoves ← {
     end‿start ← 𝕨 ⋈○Convert 𝕩

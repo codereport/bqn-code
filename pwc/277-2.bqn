@@ -1,6 +1,6 @@
 # Link: https://theweeklychallenge.org/blog/perl-weekly-challenge-277
 
-⟨_Tri⟩ ⇐ •Import "../lib/modifiers.bqn"
+⟨_Tri⟩ ⇐ •Import "../lib/fun.bqn"
 
 StrongPairs ← +´·∾(⌊(>∧0<⊢)|∘-)_Tri
 

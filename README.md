@@ -35,5 +35,5 @@ This repository is a compilation of [BQN](mlochbaum.github.io/BQN) solutions to 
 
 * [binary.bqn](https://github.com/codereport/bqn-code/blob/main/lib/binary.bqn)
 * [math.bqn](https://github.com/codereport/bqn-code/blob/main/lib/math.bqn)
-* [modifiers.bqn](https://github.com/codereport/bqn-code/blob/main/lib/modifiers.bqn)
+* [fun.bqn](https://github.com/codereport/bqn-code/blob/main/lib/fun.bqn) (functions and modifiers)
 * [string.bqn](https://github.com/codereport/bqn-code/blob/main/lib/string.bqn)

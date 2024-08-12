@@ -22,6 +22,7 @@ This repository is a compilation of [BQN](https://mlochbaum.github.io/BQN) solut
 * [BQNPAD](https://bqnpad.mechanize.systems/)
 * [BQNCrate](https://mlochbaum.github.io/bqncrate/)
 * [bqn-libs](https://github.com/mlochbaum/bqn-libs)
+* [CBQN](https://github.com/dzaima/CBQN)
 
 ### Other Repositories (BQN%/Rank)
 

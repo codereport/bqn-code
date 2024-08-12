@@ -1,5 +1,6 @@
 # Link: https://leetcode.com/problems/snake-in-matrix
 
+# Explicit Solution
 FinalPositionOfSnake ← {
     commands 𝕊 n:
     deltas ← ⟨0‿1,0‿¯1,1‿0,¯1‿0⟩
@@ -8,7 +9,11 @@ FinalPositionOfSnake ← {
     final⊑n‿n⥊↕×˜n
 }
 
-FinalPositionOfSnake2 ← (+´⟨0‿1,0‿¯1,1‿0,¯1‿0⟩⊏˜"RIGHT"‿"LEFT"‿"DOWN"‿"UP"⊐⊢)⊸⊑⟜((⋈⥊↕∘×)˜)
+# Tacit Solution
+d ← ⟨0‿1,0‿¯1,1‿0,¯1‿0⟩        # deltas
+m ← "RIGHT"‿"LEFT"‿"DOWN"‿"UP" # map
+
+FinalPositionOfSnake2 ← (+´d⊏˜m⊐⊢)⊸⊑⟜((⋈⥊↕∘×)˜)
 
 # Tests
 •Show      ⟨"RIGHT","DOWN"⟩ FinalPositionOfSnake  2 # 3

@@ -31,7 +31,7 @@ This repository is a compilation of [BQN](mlochbaum.github.io/BQN) solutions to 
 * [Advent-of-Code-2023](https://github.com/codereport/Advent-of-Code-2023) (54.1%/🥇)
 * [array-language-comparisons](https://github.com/codereport/array-language-comparisons) (0.0%)
 * [mastermind](https://github.com/codereport/mastermind) (39.2%/🥇)
-* [katas](https://github.com/codereport/katas) (21.6%/🥉)
+* [katas](https://github.com/codereport/katas) (27.2%/🥇)
 
 ### My Libraries (WIP)
 

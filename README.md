@@ -15,13 +15,14 @@
         <img src="https://img.shields.io/twitter/follow/code_report.svg?style=social&label=@code_report" /></a>
 </p>
 
-This repository is a compilation of [BQN](mlochbaum.github.io/BQN) solutions to various coding challenges.
+This repository is a compilation of [BQN](https://mlochbaum.github.io/BQN) solutions to various coding challenges.
 
 ### Resources
 
 * [BQNPAD](https://bqnpad.mechanize.systems/)
 * [BQNCrate](https://mlochbaum.github.io/bqncrate/)
 * [bqn-libs](https://github.com/mlochbaum/bqn-libs)
+* [CBQN](https://github.com/dzaima/CBQN)
 
 ### Other Repositories (BQN%/Rank)
 

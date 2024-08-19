@@ -1,8 +1,8 @@
 # Link: https://theweeklychallenge.org/blog/perl-weekly-challenge-281
 
 Convert ← 48|-⟜'0'¨
-deltas  ← (⌽¨⊸∾)∾<˘2‿¯2⋈⌜1‿¯1
-IsValid ← ∧´1⊸≤∧8⊸≥
+deltas  ← ⌽¨⊸∾⥊2‿¯2⋈⌜1‿¯1
+IsValid ← ∧´1⊸≤∧≤⟜8
 Moves   ← IsValid¨⊸/·⥊deltas+⌜⊢
 
 MinKnightMoves ← {

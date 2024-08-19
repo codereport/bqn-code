@@ -15,25 +15,28 @@
         <img src="https://img.shields.io/twitter/follow/code_report.svg?style=social&label=@code_report" /></a>
 </p>
 
-This repository is a compilation of [BQN](mlochbaum.github.io/BQN) solutions to various coding challenges.
+This repository is a compilation of [BQN](https://mlochbaum.github.io/BQN) solutions to various coding challenges.
 
 ### Resources
 
 * [BQNPAD](https://bqnpad.mechanize.systems/)
 * [BQNCrate](https://mlochbaum.github.io/bqncrate/)
 * [bqn-libs](https://github.com/mlochbaum/bqn-libs)
+* [CBQN](https://github.com/dzaima/CBQN)
 
 ### Other Repositories (BQN%/Rank)
 
-* [LeetCode](https://github.com/codereport/LeetCode) (12.9%/3)
-* [top10](https://github.com/codereport/top10) (9.9%/3)
-* [Advent-of-Code-2022](https://github.com/codereport/Advent-of-Code-2022) (42.5%/1)
-* [Advent-of-Code-2023](https://github.com/codereport/Advent-of-Code-2023) (54.1%/1)
+* [LeetCode](https://github.com/codereport/LeetCode) (13.4%/🥉)
+* [top10](https://github.com/codereport/top10) (9.9%/🥉)
+* [Advent-of-Code-2022](https://github.com/codereport/Advent-of-Code-2022) (42.5%/🥇)
+* [Advent-of-Code-2023](https://github.com/codereport/Advent-of-Code-2023) (54.1%/🥇)
 * [array-language-comparisons](https://github.com/codereport/array-language-comparisons) (0.0%)
+* [mastermind](https://github.com/codereport/mastermind) (39.2%/🥇)
+* [katas](https://github.com/codereport/katas) (27.2%/🥇)
 
 ### My Libraries (WIP)
 
 * [binary.bqn](https://github.com/codereport/bqn-code/blob/main/lib/binary.bqn)
+* [fun.bqn](https://github.com/codereport/bqn-code/blob/main/lib/fun.bqn) (functions and modifiers)
 * [math.bqn](https://github.com/codereport/bqn-code/blob/main/lib/math.bqn)
-* [modifiers.bqn](https://github.com/codereport/bqn-code/blob/main/lib/modifiers.bqn)
 * [string.bqn](https://github.com/codereport/bqn-code/blob/main/lib/string.bqn)

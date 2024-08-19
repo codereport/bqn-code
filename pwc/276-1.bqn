@@ -1,6 +1,6 @@
 # Link: https://theweeklychallenge.org/blog/perl-weekly-challenge-276
 
-⟨_Tri⟩ ⇐ •Import "../lib/modifiers.bqn"
+⟨_Tri⟩ ⇐ •Import "../lib/fun.bqn"
 
 CompleteDays ← +´·∾0=24|+_Tri
 

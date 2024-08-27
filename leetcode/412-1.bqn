@@ -2,6 +2,7 @@
 
 GetFinalState ← { 𝕊⟨nums, k, m⟩:
     (⊢×1⌈m×∊∧⌊´⊸=)⍟k nums
+  # (⊢×1⌈m×≠∧⌊/=⊢)⍣k nums (solution in Dyalog APL)
 }
 
 # Tests

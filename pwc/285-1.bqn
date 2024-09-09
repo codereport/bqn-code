@@ -1,7 +1,8 @@
 # Link: https://theweeklychallenge.org/blog/perl-weekly-challenge-285
 
 DeadEnds ← ⊢´¨(¬∘∊/⊣)⊑¨
-         # (↑¨↓¨)«~»(↑¨) - Kap
+         # (↑¨↓¨)«~»(↑¨) - Kap (original)
+         # ⊢/¨«~»(↑¨)    - Kap
          # ⊢/¨~⊃¨        - Dyalog APL
          # {⊃~/⌽↓⍉↑⍵}    - Dyalog APL (Alternative)
          # Ṫ€ḟḢ€         - Jelly

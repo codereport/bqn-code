@@ -2,20 +2,20 @@
 
 ⟨Split⟩ ⇐ •Import "../lib/string.bqn"
 
-RemSign  ← (∨´"-+"=⊑)⊸↓
-IsNat    ← ∧´∊⟜('0'+↕10)
-IsDec    ← (×´×+´)·IsNat¨·'.'⊸Split RemSign
-IsInt    ← ∧´·IsNat∘RemSign¨'e'⊸Split
-IsNumber ← (⊑'.'⊸∊)◶IsInt‿IsDec
+RmSgn ← (∨´"-+"=⊑)⊸↓
+IsNat ← ∧´∊⟜('0'+↕10)
+IsDec ← (×´×+´)·IsNat¨·'.'⊸Split RemSign
+IsInt ← ∧´·IsNat∘RemSign¨'e'⊸Split
+IsNum ← (⊑'.'⊸∊)◶IsInt‿IsDec
 
 # Tests
-•Show IsNumber "1"       # 1
-•Show IsNumber "a"       # 0
-•Show IsNumber "."       # 0
-•Show IsNumber "1.2e4.2" # 0
-•Show IsNumber "-1."     # 1
-•Show IsNumber "+1e-8"   # 1
-•Show IsNumber ".44"     # 1
-•Show IsNumber "-."      # 0
-•Show IsNumber "-.1"     # 1
-•Show IsNumber "-.-1"    # 0
+•Show IsNum "1"       # 1
+•Show IsNum "a"       # 0
+•Show IsNum "."       # 0
+•Show IsNum "1.2e4.2" # 0
+•Show IsNum "-1."     # 1
+•Show IsNum "+1e-8"   # 1
+•Show IsNum ".44"     # 1
+•Show IsNum "-."      # 0
+•Show IsNum "-.1"     # 1
+•Show IsNum "-.-1"    # 0

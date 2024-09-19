@@ -4,8 +4,8 @@
 
 RmSgn ← (∨´"-+"=⊑)⊸↓
 IsNat ← ∧´∊⟜('0'+↕10)
-IsDec ← (×´×+´)·IsNat¨·'.'⊸Split RemSign
-IsInt ← ∧´·IsNat∘RemSign¨'e'⊸Split
+IsDec ← (×´×+´)·IsNat¨·'.'⊸Split RmSgn
+IsInt ← ∧´·IsNat∘RmSgn¨'e'⊸Split
 IsNum ← (⊑'.'⊸∊)◶IsInt‿IsDec
 
 # Tests

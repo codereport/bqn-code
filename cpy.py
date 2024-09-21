@@ -4,29 +4,29 @@ import os
 import sys
 import shutil
 
-def zero_pad(n: int) -> str:
-    return f"0{n}" if n < 10 else f"{n}"
+def zero_pad(n: int, pad: int) -> str:
+    return f"{'0' * max(0, pad - len(str(n)))}{n}"
 
 def target(type: str, N: int) -> str:
     match type:
-        case "pwc":      return f"../perlweeklychallenge-club/challenge-{N}/conor-hoekstra"
+        case "pwc":      return f"../perlweeklychallenge-club/challenge-{zero_pad(N, 3)}/conor-hoekstra"
         case "aoc/2022": return f"../Advent-of-Code-2022/"
         case "aoc/2023": return f"../Advent-of-Code-2023/"
         case "leetcode": return f"../leetcode/"
 
 def source_file_name(type: str, N: int, i: int) -> str:
     match type:
-        case "pwc":      f = f"{N}-{i}.bqn"            # 273-1.bqn
+        case "pwc":      f = f"{zero_pad(N, 3)}-{i}.bqn"  # 273-1.bqn
         case "aoc/2022" \
-           | "aoc/2023": f = f"day{zero_pad(N)}.bqn"   # day01.bqn
+           | "aoc/2023": f = f"day{zero_pad(N, 2)}.bqn"   # day01.bqn
         case "leetcode": f = f"{'b' if bw else ''}{N // 10}-{N % 10}.bqn" # 403-1.bqn
     return f"{type}/{f}"
 
 def dest_file_name(type: str, i: int) -> str:
     match type:
-        case "pwc":      return f"ch-{i}.bqn"                      # ch-1.bqn
+        case "pwc":      return f"ch-{i}.bqn"              # ch-1.bqn
         case "aoc/2022" \
-           | "aoc/2023": return f"day{zero_pad(i)}.bqn"            # day01.bqn
+           | "aoc/2023": return f"day{zero_pad(i, 2)}.bqn" # day01.bqn
         case "leetcode": return f"{'B' if bw else ''}0{N // 10}_Problem_{N % 10}.bqn" # 0403_Problem_1.bqn
 
 def file_numbers(type: str, n: int):

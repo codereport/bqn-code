@@ -1,18 +1,17 @@
 # Link: https://theweeklychallenge.org/blog/perl-weekly-challenge-288
 
 MaxContiguousBlocks ← { 𝕊orig:
-    e  ← 0⥊˜≢orig          # empty
-    Iv ← ∧´≥⟜0‿0∾(≢orig)>⊢ # is valid (in bounds)
-    Ff ← { mat𝕊sym‿todo: { # flood fill
+    IsValid   ← ∧´≥⟜0‿0∾(≢𝕩)>⊢
+    FloodFill ← { mat𝕊sym‿todo: {
         0=≠todo ? +´⥊mat ;
         pos  ← ⊑todo
-        new  ← Iv¨⊸/pos⊸+¨⌽¨⊸∾0⋈¨1‿¯1
+        new  ← IsValid¨⊸/pos⊸+¨⌽¨⊸∾0⋈¨1‿¯1
         rec  ← (sym=pos⊑orig)∧¬pos⊑mat
         mat  ↩ rec◶⊢‿(1⊸+⌾(pos⊸⊑))mat
         todo ↩ rec◶⊢‿(∾⟜new)1↓todo
-        mat Ff sym‿todo
+        mat FloodFill sym‿todo
     }}
-    ⌈´e⊸Ff¨(⊑⟜orig⋈<)¨⥊↕≢orig
+    ⌈´(0⥊˜≢𝕩)⊸FloodFill¨(⊑⟜𝕩⋈<)¨⥊↕≢𝕩
 }
 
 # Tests

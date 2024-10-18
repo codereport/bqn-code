@@ -4,12 +4,12 @@
 
 Luhn ← {
     d ← •BQN∘⥊¨𝕩 # digits
-    p ← ⊑⌽xs     # payload
-    m ← 1+2|↕≠𝕩  # mask
-    p=10-10|+´∾Digits¨¯1↓m×xs
+    p ← ⊢´d      # payload
+    M ← ⌽2‿1⥊˜≠  # mask
+    p=10|-+´∾Digits¨M⊸×¯1↓d
 }
 
 # Tests
 •Show Luhn "17893729974"      # 1
-•Show Luhn "4137894711755904" # 1 🤔 something wrong here
-•Show Luhn "4137897411755904" # 0 🤔 something wrong here
+•Show Luhn "4137894711755904" # 1
+•Show Luhn "4137897411755904" # 0

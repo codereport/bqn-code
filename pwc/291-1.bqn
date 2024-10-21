@@ -2,7 +2,7 @@
 
 MiddleIndex  ← {⊑¯1∾˜/((»+`)=(»+`)⌾⌽)𝕩} # Explicit
 MiddleIndex2 ← ⊑¯1∾˜·/(»+`)=(»+`)⌾⌽     # Tacit
-MiddleIndex3 ← ⊑¯1∾˜·/(»+`){(𝔽=𝔽⌾⌽)𝕩}   # Tacit 2
+MiddleIndex3 ← ⊑¯1∾˜·/(»+`){𝔽=𝔽⌾⌽}      # Tacit 2
 
 # Tests
 •Show MiddleIndex ⟨2, 3, -1, 8, 4⟩ # 3

@@ -1,6 +1,6 @@
 # Link: https://theweeklychallenge.org/blog/perl-weekly-challenge-293
 
-IsBommerang ← { 𝕊⟨⟨a,x⟩,⟨b,y⟩,⟨c,z⟩⟩: 
+IsBommerang ← { 𝕊⟨⟨a,x⟩,⟨b,y⟩,⟨c,z⟩⟩:
     0≠(a×y-z)+(b×z-x)+c×x-y
 }
 

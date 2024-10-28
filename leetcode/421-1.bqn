@@ -1,7 +1,7 @@
 # Link: https://leetcode.com/problems/find-the-maximum-factor-score-of-array
 
 Score    ← •math.GCD´×•math.LCM´
-MaxScore ← ⌈´·Score¨({<˘¬=⌜˜↕≠𝕩}/¨<)∾<
+MaxScore ← ⌈´·Score¨({<˘≠⌜˜↕≠𝕩}/¨<)∾<
 
 # Tests
 •Show MaxScore ⟨2,4,8,16⟩  # 64

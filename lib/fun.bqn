@@ -1,4 +1,4 @@
-⟨_Tri, _TriId, _AdjMap, Deltas, Differ, _ChunkBy, Group, Permutations, Rle⟩⇐
+⟨_Tri, _TriId, _AdjMap, Deltas, Differ, _ChunkBy, Group, Permutations, Rle, Freq⟩⇐
 
 _Tri     ← {(<˘𝔽⌜˜𝕩)↓˜¨1+↕≠𝕩} # Triangle Product
 _TriId   ← {(<˘𝔽⌜˜𝕩)↓˜¨↕≠𝕩}   # Triangle Product (including diagonal)

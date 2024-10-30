@@ -1,3 +1,1 @@
-⟨Round⟩⇐
-
-Round ← ⌊0.5⊸+
+Round ⇐ ⌊0.5⊸+

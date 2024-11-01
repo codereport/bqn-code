@@ -1,7 +1,7 @@
 _Tri     ⇐ {(<˘𝔽⌜˜𝕩)↓˜¨1+↕≠𝕩} # Triangle Product
 _TriId   ⇐ {(<˘𝔽⌜˜𝕩)↓˜¨↕≠𝕩}   # Triangle Product (including diagonal)
-_AdjMap  ⇐ {(¯1⊸↓𝔽1⊸↓)𝕩}
-_ChunkBy ⇐ {(+`0∾·¬𝔽_AdjMap)⊸(⊐⊸⊔)𝕩}
+_AdjMap  ⇐ {¯1⊸↓𝔽1⊸↓}
+_ChunkBy ⇐ {(+`0∾·¬𝔽_AdjMap)⊸(⊐⊸⊔)}
 
 Deltas ⇐ -˜ _AdjMap
 Differ ⇐ ≠ _AdjMap

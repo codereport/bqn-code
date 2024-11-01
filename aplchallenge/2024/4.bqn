@@ -7,7 +7,7 @@ a ← "here"‿"be"‿"dragons"
 •Show ⌽⌽¨"mood"‿"net"‿"pop"        # 5: All Backwards
 •Show ⌽⊸≡"APL"                     # 6: Palindrome
 ⌽⊸≡                                # 7: More Palindromes
-•Show 'Q'{(=⌜˜↕𝕩)⊏'+'‿𝕨}4         # 8: Turning up the Heat
+•Show 'Q'{(=⌜˜↕𝕩)⊏'+'‿𝕨}4          # 8: Turning up the Heat
 •Show 2‿1‿0 ⊑¨ a                   # 9: Babushka
 
 # 10: X Marks the Spot (even only)

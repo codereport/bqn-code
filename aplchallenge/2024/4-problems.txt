@@ -1,0 +1,81 @@
+1: Easy as 1-2-3
+Write some APL code that uses ⍳ to get the numbers from 1 to 42. The result should be 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42
+
+----
+2: Rectangle Areas
+Write some APL code that uses a single × to calculate the area of three rectangles. The first has sides of length 3 and 2, the second has sides of length 1 and 7, and the third has sides of length 4 and 2. The result should be 6 7 8
+
+----
+3: Selection
+Write some APL code using square brackets that transforms 'DYALOG APL' into 'GO POLLY'
+
+----
+4: How the Tables have Turned
+Using Reshape (⍴) and Iota (⍳ from problem 1), create the following table of numbers:
+
+ 1  2  3  4
+ 5  6  7  8
+ 9 10 11 12
+13 14 15 16
+17 18 19 20
+21 22 23 24
+
+----
+5: All Backwards
+Using Reverse (⌽) and Each (¨), turn 'mood' 'net' 'pop' into:
+
+┌───┬───┬────┐
+│pop│ten│doom│
+└───┴───┴────┘
+Note that both the list of words, and each word, have been reversed.
+
+----
+6: Palindrome
+Using Match (≡) and Reverse (⌽ from problem 5), check whether 'APL' is a palindrome (a word that stays the same when read backwards). Hint: It is not, so the answer should be 0.
+
+----
+7: More Palindromes
+Using what you learnt in problem 6, write a function that checks whether its argument is a palindrome (a word that stays the same when read backwards). For example:
+      {answer} 'racecar'
+1
+      {answer} 'medium'
+0
+      {answer} 'civic'
+1
+
+----
+8: Turning up the Heat
+Write a function using Stranding, Reshape (⍴ from problem 4), and Catenate (,) that takes a letter as its left argument and a size as its right argument, then produces a square table of the given size. The table should be made entirely of plus symbols (+), replaced by the given letter marking the diagonal from the top left to the bottom right:
+      'o' {answer} 3
+o++
++o+
+++o
+      'Q' {answer} 4
+Q+++
++Q++
+++Q+
++++Q
+
+----
+9: Babushka
+Using the way of selection you learnt in problem 3, write a function that takes a list of numbers on the left and a list of words on the right. It must then use the first number on the left to select a letter from the first word on the right, use the second number to select a letter from the second word, and so on:
+      3 2 1 {answer} 'here' 'be' 'dragons'
+red
+      3 3 1 5 {answer} 'just' 'eat' 'apple' 'today'
+stay
+
+----
+10: X Marks the Spot
+Using everything that you’ve learnt so far, write a function that takes a size as right argument and draws a large X of that size. Use backslash symbols (\) and slash symbols (/) for the diagonals:
+      {answer} 4
+\  /
+ \/ 
+ /\ 
+/  \
+When your function is given an odd number as argument, then the diagonals meet in a single letter. Put an X there:
+      {answer} 5
+\   /
+ \ / 
+  X  
+ / \ 
+/   \

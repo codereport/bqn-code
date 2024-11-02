@@ -9,11 +9,7 @@ a ← "here"‿"be"‿"dragons"
 ⌽⊸≡                                # 7: More Palindromes
 •Show 'Q'{(=⌜˜↕𝕩)⊏'+'‿𝕨}4          # 8: Turning up the Heat
 •Show 2‿1‿0 ⊑¨ a                   # 9: Babushka
-
-# 10: X Marks the Spot (even only)
-X ← { 
-  Q ← {(=⌜˜↕⌊2÷˜𝕩)⊏' '‿𝕨} # quadrant
-  ∾⟜(⌽⌽˘)('\'⊸Q∾˘(⌽˘'/'⊸Q))𝕩
-}
+X ← " \/X"⊏˜·(⊢+·⌽2⊸×)·=⌜˜↕        # 10: X Marks the Spot
 
 •Show X 4
+•Show X 5

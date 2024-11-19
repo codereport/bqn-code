@@ -69,13 +69,13 @@ stay
 Using everything that you’ve learnt so far, write a function that takes a size as right argument and draws a large X of that size. Use backslash symbols (\) and slash symbols (/) for the diagonals:
       {answer} 4
 \  /
- \/ 
- /\ 
+ \/
+ /\
 /  \
 When your function is given an odd number as argument, then the diagonals meet in a single letter. Put an X there:
       {answer} 5
 \   /
- \ / 
-  X  
- / \ 
+ \ /
+  X
+ / \
 /   \

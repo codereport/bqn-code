@@ -4,7 +4,7 @@
     <a href="https://github.com/codereport/bqn-code/issues" alt="contributions welcome">
         <img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat" /></a>
     <a href="https://lbesson.mit-license.org/" alt="MIT license">
-        <img src="https://img.shields.io/badge/License-MIT-blue.svg" /></a>        
+        <img src="https://img.shields.io/badge/License-MIT-blue.svg" /></a>
     <a href="mlochbaum.github.io/BQN">
         <img src="https://img.shields.io/badge/BQN-0.7-ff69b4.svg"/></a>
     <a href="https://github.com/codereport?tab=followers" alt="GitHub followers">

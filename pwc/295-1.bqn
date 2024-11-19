@@ -1,5 +1,7 @@
 # Link: https://theweeklychallenge.org/blog/perl-weekly-challenge-295
 
+⟨UnitTest⟩ ⇐ •Import "/home/cph/bqn-test/test.bqn"
+
 WorkBreak ← {
    0=≠𝕨 ? 1 ;
    n ← ≠∾𝕩/˜⊑¨⍷⟜𝕨¨𝕩
@@ -7,6 +9,6 @@ WorkBreak ← {
 }
 
 # Tests
-•Show  "weeklychallenge" WorkBreak ⟨"challenge", "weekly"⟩       # 1
-•Show     "perlrakuperl" WorkBreak ⟨"raku", "perl"⟩              # 1
-•Show "sonsanddaughters" WorkBreak ⟨"sons", "sand", "daughters"⟩ # 0
+UnitTest 1 =  "weeklychallenge" WorkBreak ⟨"challenge", "weekly"⟩
+UnitTest 1 =     "perlrakuperl" WorkBreak ⟨"raku", "perl"⟩
+UnitTest 0 = "sonsanddaughters" WorkBreak ⟨"sons", "sand", "daughters"⟩

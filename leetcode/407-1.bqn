@@ -1,6 +1,7 @@
 # Link: https://leetcode.com/problems/number-of-bit-changes-to-make-two-integers-equal/description/
 
-⟨Binary⟩ ⇐ •Import "../lib/binary.bqn"
+⟨UnitTest⟩ ⇐ •Import "/home/cph/bqn-test/test.bqn"
+⟨Binary⟩   ⇐ •Import "/home/cph/bqn-code/lib/binary.bqn"
 
 MinChanges ← {
     a‿b ← 𝕩 ⋈○Binary 𝕨
@@ -10,6 +11,6 @@ MinChanges ← {
 }
 
 # Tests
-•Show 13 MinChanges 4  # 2
-•Show 21 MinChanges 21 # 0
-•Show 14 MinChanges 13 # -1
+UnitTest (13 MinChanges 4)  ≡ 2
+UnitTest (21 MinChanges 21) ≡ 0
+UnitTest (14 MinChanges 13) ≡ -1

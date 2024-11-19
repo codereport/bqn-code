@@ -1,12 +1,13 @@
 # Link: https://leetcode.com/problems/count-almost-equal-pairs-i
 
-⟨_Tri, _TriId⟩ ⇐ •Import "../lib/fun.bqn"
+⟨UnitTest⟩ ⇐ •Import "/home/cph/bqn-test/test.bqn"
+⟨_Tri, _TriId⟩ ⇐ •Import "/home/cph/bqn-code/lib/fun.bqn"
 
 SwapTwo    ← {⌽⌾(𝕩⊸⊏)𝕨}
 IsPair     ← {⊑𝕨∊{•BQN¨𝕩⊸SwapTwo¨∾⋈_TriId˜↕≠𝕩}•Fmt𝕩}
 CountPairs ← +´·∾IsPair _Tri˜
 
 # Tests
-•Show CountPairs ⟨3,12,30,17,21⟩ # 2
-•Show CountPairs ⟨1,1,1,1,1⟩     # 10
-•Show CountPairs ⟨123,231⟩       # 0
+UnitTest (CountPairs ⟨3,12,30,17,21⟩) ≡ 2
+UnitTest (CountPairs ⟨1,1,1,1,1⟩    ) ≡ 10
+UnitTest (CountPairs ⟨123,231⟩      ) ≡ 0

@@ -1,8 +1,10 @@
 # Link: https://leetcode.com/problems/find-the-encrypted-string/
 
+⟨UnitTest⟩ ⇐ •Import "/home/cph/bqn-test/test.bqn"
+
 GetEncryptedString ← ⌽
 
 # Tests
-•Show 3 GetEncryptedString "dart" # "tdar"
-•Show 1 GetEncryptedString "aaa"  # "aaa"
-•Show 4 GetEncryptedString "byd"  # "ydb"
+UnitTest (3 GetEncryptedString "dart") ≡ "tdar"
+UnitTest (1 GetEncryptedString "aaa" ) ≡ "aaa"
+UnitTest (4 GetEncryptedString "byd" ) ≡ "ydb"

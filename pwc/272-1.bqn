@@ -1,9 +1,10 @@
 # Link: https://theweeklychallenge.org/blog/perl-weekly-challenge-272/
 
-⟨Join, Split⟩ ⇐ •Import "../lib/string.bqn"
+⟨UnitTest⟩    ⇐ •Import "/home/cph/bqn-test/test.bqn"
+⟨Join, Split⟩ ⇐ •Import "/home/cph/bqn-code/lib/string.bqn"
 
 DefangIp ← "[.]" Join '.' Split ⊢
 
 # Tests
-•Show DefangIp "1.1.1.1"     # "1[.]1[.]1[.]1"
-•Show DefangIp "255.101.1.0" # "255[.]101[.]1[.]0"
+UnitTest (DefangIp "1.1.1.1")     ≡ "1[.]1[.]1[.]1"
+UnitTest (DefangIp "255.101.1.0") ≡ "255[.]101[.]1[.]0"

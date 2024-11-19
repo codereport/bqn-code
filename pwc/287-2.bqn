@@ -1,6 +1,7 @@
 # Link: https://theweeklychallenge.org/blog/perl-weekly-challenge-287
 
-⟨Split⟩ ⇐ •Import "../lib/string.bqn"
+⟨UnitTest⟩ ⇐ •Import "/home/cph/bqn-test/test.bqn"
+⟨Split⟩    ⇐ •Import "/home/cph/bqn-code/lib/string.bqn"
 
 RmSgn ← (∨´"-+"=⊑)⊸↓
 IsNat ← ∧´∊⟜('0'+↕10)
@@ -9,13 +10,13 @@ IsInt ← ∧´·IsNat∘RmSgn¨'e'⊸Split
 IsNum ← (⊑'.'⊸∊)◶IsInt‿IsDec
 
 # Tests
-•Show IsNum "1"       # 1
-•Show IsNum "a"       # 0
-•Show IsNum "."       # 0
-•Show IsNum "1.2e4.2" # 0
-•Show IsNum "-1."     # 1
-•Show IsNum "+1e-8"   # 1
-•Show IsNum ".44"     # 1
-•Show IsNum "-."      # 0
-•Show IsNum "-.1"     # 1
-•Show IsNum "-.-1"    # 0
+UnitTest 1 ≡ IsNum "1"       #
+UnitTest 0 ≡ IsNum "a"       #
+UnitTest 0 ≡ IsNum "."       #
+UnitTest 0 ≡ IsNum "1.2e4.2" #
+UnitTest 1 ≡ IsNum "-1."     #
+UnitTest 1 ≡ IsNum "+1e-8"   #
+UnitTest 1 ≡ IsNum ".44"     #
+UnitTest 0 ≡ IsNum "-."      #
+UnitTest 1 ≡ IsNum "-.1"     #
+UnitTest 0 ≡ IsNum "-.-1"    #

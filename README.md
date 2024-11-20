@@ -34,6 +34,10 @@ This repository is a compilation of [BQN](https://mlochbaum.github.io/BQN) solut
 * [mastermind](https://github.com/codereport/mastermind) (39.2%/🥇)
 * [katas](https://github.com/codereport/katas) (27.2%/🥇)
 
+### My Tooling
+
+* [bqn-test](https://github.com/codereport/bqn-test)
+
 ### My Libraries (WIP)
 
 * [binary.bqn](https://github.com/codereport/bqn-code/blob/main/lib/binary.bqn)

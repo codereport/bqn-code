@@ -1,5 +1,7 @@
 # Link: https://theweeklychallenge.org/blog/perl-weekly-challenge-285
 
+⟨UnitTest⟩ ⇐ •Import "/home/cph/bqn-test/test.bqn"
+
 DeadEnds ← ⊢´¨(¬∘∊/⊣)⊑¨
          # (↑¨↓¨)«~»(↑¨) - Kap (original)
          # ⊢/¨«~»(↑¨)    - Kap
@@ -9,5 +11,5 @@ DeadEnds ← ⊢´¨(¬∘∊/⊣)⊑¨
          # ↓¨~↑¨         - Hypothetical APL
 
 # Tests
-•Show DeadEnds ⟨⟨"B","C"⟩, ⟨"D","B"⟩, ⟨"C","A"⟩⟩ # "A"
-•Show DeadEnds ⟨⟨"A","Z"⟩⟩                       # "Z"
+UnitTest (DeadEnds ⟨⟨"B","C"⟩, ⟨"D","B"⟩, ⟨"C","A"⟩⟩) ≡ ⟨"A"⟩
+UnitTest (DeadEnds ⟨⟨"A","Z"⟩⟩                      ) ≡ ⟨"Z"⟩

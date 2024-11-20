@@ -1,5 +1,7 @@
 # Link: https://theweeklychallenge.org/blog/perl-weekly-challenge-272/
 
+⟨UnitTest⟩ ⇐ •Import "/home/cph/bqn-test/test.bqn"
+
 # Solution 1 (Explicit)
 ScoreOfString ← {+´|-´˘2↕'a'-˜𝕩}
 
@@ -11,6 +13,13 @@ Ord    ← -⟜'a'
 Deltas ← -´˘2↕⊢
 ScoreOfString3 ← +´·|·Deltas Ord
 
-•Show ScoreOfString "hello" # 13
-•Show ScoreOfString "perl"  # 30
-•Show ScoreOfString "raku"  # 37
+# Tests
+UnitTest (ScoreOfString  "hello") ≡ 13
+UnitTest (ScoreOfString  "perl" ) ≡ 30
+UnitTest (ScoreOfString  "raku" ) ≡ 37
+UnitTest (ScoreOfString2 "hello") ≡ 13
+UnitTest (ScoreOfString2 "perl" ) ≡ 30
+UnitTest (ScoreOfString2 "raku" ) ≡ 37
+UnitTest (ScoreOfString3 "hello") ≡ 13
+UnitTest (ScoreOfString3 "perl" ) ≡ 30
+UnitTest (ScoreOfString3 "raku" ) ≡ 37

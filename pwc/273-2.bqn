@@ -1,6 +1,8 @@
 # Link: https://theweeklychallenge.org/blog/perl-weekly-challenge-273
 
+⟨UnitTest⟩ ⇐ •Import "/home/cph/bqn-test/test.bqn"
+
 BAfterA ← (⌈´∧⌈`⊸≡)'b'=⊢
 
 # Tests
-•Show BAfterA ¨ "aabb"‿"abab"‿"aaa"‿"bbb" # ⟨ 1 0 0 1 ⟩
+UnitTest (BAfterA ¨ "aabb"‿"abab"‿"aaa"‿"bbb") ≡ ⟨1,0,0,1⟩

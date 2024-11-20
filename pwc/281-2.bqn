@@ -1,5 +1,7 @@
 # Link: https://theweeklychallenge.org/blog/perl-weekly-challenge-281
 
+⟨UnitTest⟩ ⇐ •Import "/home/cph/bqn-test/test.bqn"
+
 Convert ← 48|-⟜'0'¨
 deltas  ← ⌽¨⊸∾⥊2‿¯2⋈⌜1‿¯1
 IsValid ← ∧´1⊸≤∧≤⟜8
@@ -11,5 +13,5 @@ MinKnightMoves ← {
 }
 
 # Tests
-•Show "g2" MinKnightMoves "a8" # 4
-•Show "g2" MinKnightMoves "h2" # 3
+UnitTest ("g2" MinKnightMoves "a8") ≡ 4
+UnitTest ("g2" MinKnightMoves "h2") ≡ 3

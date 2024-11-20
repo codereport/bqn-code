@@ -1,7 +1,9 @@
 # Link: https://leetcode.com/problems/report-spam-message
 
+⟨UnitTest⟩ ⇐ •Import "/home/cph/bqn-test/test.bqn"
+
 IsSpam ← 2≤·+´∊
 
 # Tests
-•Show                  ⟨"world","hello"⟩ IsSpam ⟨"hello","world","leetcode"⟩  # 1
-•Show ⟨"world","programming","leetcode"⟩ IsSpam ⟨"hello","programming","fun"⟩ # 0
+UnitTest (                 ⟨"world","hello"⟩ IsSpam ⟨"hello","world","leetcode"⟩ ) ≡ 1
+UnitTest (⟨"world","programming","leetcode"⟩ IsSpam ⟨"hello","programming","fun"⟩) ≡ 0

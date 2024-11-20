@@ -1,7 +1,8 @@
 # Link: https://theweeklychallenge.org/blog/perl-weekly-challenge-287
 
-⟨Group⟩ ⇐ •Import "../lib/fun.bqn"
-⟨IsDigit, IsLower, IsUpper⟩ ⇐ •Import "../lib/string.bqn"
+⟨UnitTest⟩ ⇐ •Import "/home/cph/bqn-test/test.bqn"
+⟨Group⟩ ⇐ •Import "/home/cph/bqn-code/lib/fun.bqn"
+⟨IsDigit, IsLower, IsUpper⟩ ⇐ •Import "/home/cph/bqn-code/lib/string.bqn"
 
 MakeStrong ← {
     r ← +´⌊3÷˜≠¨Group𝕩 # replacements for repeating
@@ -13,9 +14,9 @@ MakeStrong ← {
 }
 
 # Tests
-•Show MakeStrong "a"         # 5
-•Show MakeStrong "aB2"       # 3
-•Show MakeStrong "PaaSW0rd"  # 0
-•Show MakeStrong "Paaasw0rd" # 1
-•Show MakeStrong "aaaaa"     # 2
-•Show MakeStrong "aaaaaaaaa" # 3
+UnitTest (MakeStrong "a"        ) ≡ 5
+UnitTest (MakeStrong "aB2"      ) ≡ 3
+UnitTest (MakeStrong "PaaSW0rd" ) ≡ 0
+UnitTest (MakeStrong "Paaasw0rd") ≡ 1
+UnitTest (MakeStrong "aaaaa"    ) ≡ 2
+UnitTest (MakeStrong "aaaaaaaaa") ≡ 3

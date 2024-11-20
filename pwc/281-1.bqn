@@ -1,9 +1,11 @@
 # Link: https://theweeklychallenge.org/blog/perl-weekly-challenge-281
 
+⟨UnitTest⟩ ⇐ •Import "/home/cph/bqn-test/test.bqn"
+
 IsDark ← 2|·+´48|-⟜'0'¨
 
 # Tests
-•Show IsDark "d3" # 1
-•Show IsDark "g5" # 0
-•Show IsDark "e6" # 1
-•Show IsDark "a1" # 0
+UnitTest (IsDark "d3") ≡ 1
+UnitTest (IsDark "g5") ≡ 0
+UnitTest (IsDark "e6") ≡ 1
+UnitTest (IsDark "a1") ≡ 0

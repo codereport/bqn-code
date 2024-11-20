@@ -2,7 +2,7 @@
 
 ⟨UnitTest⟩ ⇐ •Import "/home/cph/bqn-test/test.bqn"
 
-DigitCountValue ← (+˝(=⌜⟜↕≠))⊸≡
+DigitCountValue ← (+˝=⌜⟜(↕≠))⊸≡
 
 # Tests
 UnitTest (DigitCountValue ⟨1, 2, 1, 0⟩) ≡ 1

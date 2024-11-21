@@ -1,8 +1,10 @@
-ListRecursive ⇐ {
+ListRecursiveFiles ⇐ {
     l ← •file.List 𝕩     # files/directories
     P ← (𝕩∾"/")⊸∾        # prefix
-    m ← 𝕨=•file.Type¨P¨l # mask
+    m ← 'd'=•file.Type¨P¨l # mask
     d ← l/˜m             # directories
     f ← l/˜¬m            # file
-    (P¨f) ∾ ∾𝕨⊸𝕊¨P¨d
+    (P¨f) ∾ ∾𝕊¨P¨d
 }
+
+ListRecursiveBQNFiles ⇐ (∨´1↓".bqn"⊸⍷)¨⊸/ListRecursiveFiles

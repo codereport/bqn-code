@@ -9,4 +9,6 @@ Group  ⇐ = _ChunkBy
 Rle    ⇐ >·(⊑⋈≠)¨Group
 Freq   ⇐ Rle∧
 
+FindFull ⇐ { Op ← {𝕩⌈˜𝕨-1} ⋄ m‿n ← 𝕨⋈○≠𝕩 ⋄ (1⌊·Op`m⊸×)n↑𝕨⍷𝕩 }
+
 Permutations ⇐ {⊏⟜𝕩(≍↕0){∾˝(0∾˘1+𝕩)⊸⊏˘⍒˘=⌜˜↕𝕨}´-⟜↕≠𝕩}

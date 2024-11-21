@@ -37,6 +37,7 @@ This repository is a compilation of [BQN](https://mlochbaum.github.io/BQN) solut
 ### My Tooling
 
 * [bqn-test](https://github.com/codereport/bqn-test)
+* [bqn-lint](https://github.com/codereport/bqn-lint)
 
 ### My Libraries (WIP)
 

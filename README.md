@@ -44,3 +44,4 @@ This repository is a compilation of [BQN](https://mlochbaum.github.io/BQN) solut
 * [fun.bqn](https://github.com/codereport/bqn-code/blob/main/lib/fun.bqn) (functions and modifiers)
 * [math.bqn](https://github.com/codereport/bqn-code/blob/main/lib/math.bqn)
 * [string.bqn](https://github.com/codereport/bqn-code/blob/main/lib/string.bqn)
+* [file_system.bqn](https://github.com/codereport/bqn-code/blob/main/lib/file_system.bqn)

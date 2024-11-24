@@ -8,4 +8,3 @@ MinimumSumSubarray ← { ×∘≠◶¯1‿(⌊´)0⊸<⊸/∾+´˘¨↕⟜𝕨¨
 UnitTest (⟨3,-2,1,4⟩  MinimumSumSubarray 2‿3) ≡  1
 UnitTest (⟨-2,2,-3,1⟩ MinimumSumSubarray 2‿3) ≡ -1
 UnitTest (⟨1,2,3,4⟩   MinimumSumSubarray 2‿4) ≡  3
-

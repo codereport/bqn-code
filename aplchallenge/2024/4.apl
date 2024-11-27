@@ -5,6 +5,6 @@
 ⌽⌽¨'mood' 'net' 'pop'         ⍝ 5: All Backwards
 'APL'≡⌽'APL'                  ⍝ 6: Palindrome
 {⍵≡⌽⍵}                        ⍝ 7: More Palindromes
-🤷‍♂️                            ⍝ 8: Turning up the Heat
+{('+',⍺)[1+∘.=⍨⍳⍵]}           ⍝ 8: Turning up the Heat
 {⍺⊃¨⍵}                        ⍝ 9: Babushka
-🤷‍♂️                            ⍝ 10: X Marks the Spot
+{' \/X'[1+(⊢+(⌽2×⊢))∘.=⍨⍳⍵]}  ⍝ 10: X Marks the Spot

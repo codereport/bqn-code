@@ -3,7 +3,7 @@
 ⟨UnitTest⟩ ⇐ •Import "/home/cph/bqn-test/test.bqn"
 ⟨Words, Unwords⟩ ⇐ •Import "/home/cph/bqn-code/lib/string.bqn"
 
-SortString ←  Unwords·¯1⊸↓¨·(⍋¯1⊸↑¨)⊸⊏Words
+SortString ← Unwords·¯1⊸↓¨·(⍋¯1⊸↑¨)⊸⊏Words
 
 # Tests
 UnitTest (SortString "and2 Raku3 cousins5 Perl1 are4"                  ) ≡ "Perl and Raku are cousins"

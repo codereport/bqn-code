@@ -2,8 +2,8 @@
 
 ⟨UnitTest⟩ ⇐ •Import "/home/cph/bqn-test/test.bqn"
 
-MinimumMoves  ← { (>´∘⊢-˜(+´·|(a-1)⊸-))𝕩⊐a←1‿(≠𝕩) }
-MinimumMoves2 ← { (>´b)-˜+´|(a-1)-b←𝕩⊐a←1‿(≠𝕩) }
+MinimumMoves  ← { (>´∘⊢-˜(+´·|(a-1)⊸-))𝕩⊐a ← 1‿(≠𝕩) }
+MinimumMoves2 ← { (>´b)-˜+´|(a-1)-b ← 𝕩⊐a ← 1‿(≠𝕩) }
 
 # Tests
 UnitTest (MinimumMoves 2‿1‿4‿3) ≡ 2

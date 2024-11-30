@@ -5,7 +5,7 @@
 Convert  ← 9‿9⥊·∾0⌈·-⟜'0'∾
 IsValid9 ← ∧´·∊1⊸⌊⊸/
 Squares  ← (⥊0‿3‿6+⌜0‿21‿36)⊏49‿9⥊3‿3↕⊢
-IsValid ← ∧´·IsValid9˘·Squares⊸∾·⍉⊸∾Convert
+IsValid  ← ∧´·IsValid9˘·Squares⊸∾·⍉⊸∾Convert
 
 # Tests
 UnitTest (IsValid ⟨⟨"5","3",".",".","7",".",".",".","."⟩

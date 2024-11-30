@@ -3,7 +3,7 @@
 ⟨UnitTest⟩ ⇐ •Import "/home/cph/bqn-test/test.bqn"
 
 # Solution 1
-H ← ÷⟜2
+H      ← ÷⟜2
 MinAvg ← H·⌊´H∘≠(↑+⌽∘↓)∧
 
 # Solution 2

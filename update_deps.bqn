@@ -1,7 +1,7 @@
 #!/usr/bin/env bqn
 
 src  ← •wdpath∾"/lib/"
-dirs ← ∾⟜"/deps"¨"/home/cph/"⊸∾¨"bqn-lint"‿"bqn-test"
+dirs ← ∾⟜"/deps"¨"/home/cph/"⊸∾¨"bqn-lint"‿"bqn-test"‿"bqn-format"
 
 # CBQN currently doesn't implement •file.Copy
 ForceCopy ← {

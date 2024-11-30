@@ -8,6 +8,7 @@ CountKConstraintSubstrings ← {+´𝕨⊸{∨´𝕨≥+´˘"10"=⌜𝕩}¨∾1�
 # Multi-Liner
 PowerSlice   ← ∾·1⊸↓¨·↑¨↓
 BinaryString ← {∨´𝕨≥+´˘"10"=⌜𝕩}
+
 CountKConstraintSubstrings2 ← {+´𝕨⊸BinaryString¨ PowerSlice 𝕩}
 
 # Tests

@@ -9,6 +9,7 @@ Replace ⇐ { t‿r𝕊𝕩: r Join t Split 𝕩 }
 Upper   ⇐ -⟜(32×1="a{"⊸⍋) # from BQN Crate
 IsLower ⇐ ∨´('a'+↕26)⊸=
 IsUpper ⇐ ∨´('A'+↕26)⊸=
+Trim    ⇐ (¬·(∧`⌾⌽∨∧`)' '=⊢)⊸/
 
 # From Haskell
 Lines   ⇐ (@+10)⊸Split

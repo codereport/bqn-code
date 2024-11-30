@@ -4,6 +4,7 @@
 
 To ← ⊣+(↕1+-˜)
 Pd ← 2⊸=·+´0=↕⊸|
+
 NonSpecialCount ← +´·¬·Pd¨To
 
 # Tests

@@ -1,4 +1,3 @@
-
 ⟨UnitTest⟩ ⇐ •Import "/home/cph/bqn-test/test.bqn"
 
 s ⇐ •Import "/home/cph/bqn-code/lib/string.bqn"

@@ -12,28 +12,32 @@ def target(type: str, N: int) -> str:
         case "pwc":      return f"../perlweeklychallenge-club/challenge-{zero_pad(N, 3)}/conor-hoekstra"
         case "aoc/2022": return f"../Advent-of-Code-2022/"
         case "aoc/2023": return f"../Advent-of-Code-2023/"
+        case "aoc/2024": return f"../Advent-of-Code-2024/"
         case "leetcode": return f"../leetcode/"
 
 def source_file_name(type: str, N: int, i: int) -> str:
     match type:
-        case "pwc":      f = f"{zero_pad(N, 3)}-{i}.bqn"  # 273-1.bqn
+        case "pwc":      f = f"{zero_pad(N, 3)}-{i}.bqn" # 273-1.bqn
         case "aoc/2022" \
-           | "aoc/2023": f = f"day{zero_pad(N, 2)}.bqn"   # day01.bqn
+           | "aoc/2023" \
+           | "aoc/2024": f = f"day{zero_pad(N, 2)}.bqn"                   # day01.bqn
         case "leetcode": f = f"{'b' if bw else ''}{N // 10}-{N % 10}.bqn" # 403-1.bqn
     return f"{type}/{f}"
 
 def dest_file_name(type: str, i: int) -> str:
     match type:
-        case "pwc":      return f"ch-{i}.bqn"              # ch-1.bqn
+        case "pwc":      return f"ch-{i}.bqn" # ch-1.bqn
         case "aoc/2022" \
-           | "aoc/2023": return f"day{zero_pad(i, 2)}.bqn" # day01.bqn
+           | "aoc/2023" \
+           | "aoc/2024": return f"day{zero_pad(i, 2)}.bqn"                            # day01.bqn
         case "leetcode": return f"{'B' if bw else ''}0{N // 10}_Problem_{N % 10}.bqn" # 0403_Problem_1.bqn
 
 def file_numbers(type: str, n: int):
     match type:
         case "pwc":      return [1, 2]
         case "aoc/2022" \
-           | "aoc/2023": return [n]
+           | "aoc/2023" \
+           | "aoc/2024": return [n]
         case "leetcode": return [n]
 
 def copy_and_modify_files(N: int, type: str):
@@ -68,7 +72,7 @@ if __name__ == "__main__":
     if len(sys.argv) != 3:
         print("Usage: python script.py type N")
     else:
-        valid_types = ["pwc", "aoc/2022", "aoc/2023", "leetcode"]
+        valid_types = ["pwc", "aoc/2022", "aoc/2023", "aoc/2024", "leetcode"]
         type = sys.argv[1]
         if type not in valid_types:
             print(f"type must be in {valid_types}")

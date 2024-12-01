@@ -9,7 +9,7 @@ Parse ← >·(•BQN¨s.Words)¨•file.Lines
 
 # Solutions
 A ← +´·|·-˝·∧˘⍉
-B ← {+´(⥊1↑˘𝕩)×+´˘=⌜´<˘⍉𝕩}
+B ← {+´(⊑˘𝕩)×+´˘=⌜´<˘⍉𝕩}
 
 # Tests
 u.UnitTest (A Parse testInput) ≡ 11

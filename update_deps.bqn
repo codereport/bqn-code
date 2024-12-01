@@ -11,7 +11,7 @@ ForceCopy ← {
 
 main ← {
     { ((𝕩∾"/")⊸∾ ForceCopy src⊸∾)¨ •file.List 𝕩 }¨ dirs
-    •Out "🥳 deps updated!"
+    •Out "Dependencies updated! 🥳"
 }
 
 main

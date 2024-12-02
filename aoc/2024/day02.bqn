@@ -9,7 +9,7 @@ input     ← "/home/cph/bqn-code/aoc/2024/data/02.txt"
 Parse ← (•BQN¨s.Words)¨•file.Lines
 
 # Solutions
-Safe ← ((∧´(1⊸≤∧≤⟜3)∘|)∧(∨≡∧)∘×)fn.Deltas
+Safe ← (∧´∘(1⊸≤∧≤⟜3)∘|∧(∨≡∧)∘×)fn.Deltas
 A    ← +´Safe¨
 B    ← +´{∨´Safe¨/⟜𝕩¨<˘¬=⌜˜↕≠𝕩}¨
 

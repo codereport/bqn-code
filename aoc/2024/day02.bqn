@@ -6,7 +6,7 @@ testInput ← "/home/cph/bqn-code/aoc/2024/data/02-test.txt"
 input     ← "/home/cph/bqn-code/aoc/2024/data/02.txt"
 
 # Parsing
-Parse ← (•BQN¨s.Words)¨•file.Lines
+Parse ← s.Ints¨•file.Lines
 
 # Solutions
 Safe ← (∧´∘(1⊸≤∧≤⟜3)∘|∧(∨≡∧)∘×)fn.Deltas

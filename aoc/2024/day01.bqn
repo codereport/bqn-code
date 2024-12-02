@@ -5,7 +5,7 @@ testInput ← "/home/cph/bqn-code/aoc/2024/data/01-test.txt"
 input     ← "/home/cph/bqn-code/aoc/2024/data/01.txt"
 
 # Parsing
-Parse ← >·(•BQN¨s.Words)¨•file.Lines
+Parse ← >·s.Ints¨•file.Lines
 
 # Solutions
 A ← +´·|·-˝·∧˘⍉

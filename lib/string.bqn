@@ -18,5 +18,6 @@ Trim      ⇐ (¬·(∧`⌾⌽∨∧`)' '=⊢)⊸/
 Lines   ⇐ nl⊸Split
 Lines2  ⇐ nl‿nl⊸Split
 Words   ⇐ ' '⊸Split
+Ints    ⇐ •BQN¨Words
 Unlines ⇐ nl⊸Join
 Unwords ⇐ ' '⊸Join

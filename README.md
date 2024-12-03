@@ -30,7 +30,7 @@ This repository is a compilation of [BQN](https://mlochbaum.github.io/BQN) solut
 * [top10](https://github.com/codereport/top10) (9.9%/🥉)
 * [Advent-of-Code-2022](https://github.com/codereport/Advent-of-Code-2022) (42.5%/🥇)
 * [Advent-of-Code-2023](https://github.com/codereport/Advent-of-Code-2023) (54.1%/🥇)
-* [Advent-of-Code-2024](https://github.com/codereport/Advent-of-Code-2023) (100%/🥇)
+* [Advent-of-Code-2024](https://github.com/codereport/Advent-of-Code-2024) (100%/🥇)
 * [array-language-comparisons](https://github.com/codereport/array-language-comparisons) (0.0%)
 * [mastermind](https://github.com/codereport/mastermind) (39.2%/🥇)
 * [katas](https://github.com/codereport/katas) (27.2%/🥇)

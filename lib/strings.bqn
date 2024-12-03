@@ -56,9 +56,9 @@ MarkSplit ← (2⌊≠∘⊣)◶{𝕤
 Locate ← ⊑ MarkSplit
 
 # Split string 𝕩 on occurrences of separator 𝕨, removing the separators
-Split ← (0<≠∘⊢)◶⟨
+Split ← (×≠∘⊢)◶⟨
   ⋈⊢
-  (1+`⊢)⊸((1-˜×)∾¯1⊏⊣)´∘MarkSplit⍟(0<≠∘⊢) ⊔ ⊢
+  (1+`⊢)⊸((1-˜×)∾¯1⊏⊣)´∘MarkSplit⍟(×≠∘⊢) ⊔ ⊢
 ⟩
 
 # Replace each instance of a string in old with the corresponding
@@ -66,7 +66,7 @@ Split ← (0<≠∘⊢)◶⟨
 # Instances are non-overlapping, and earlier ones take precedence.
 ReplaceAll ← { ⟨old,new⟩ 𝕊 str:
   ! (≠new) ≡ l ← ≠old
-  "ReplaceAll: Can't replace empty" ! ∧´0<≠¨old
+  "ReplaceAll: Can't replace empty" ! ∧´×≠¨old
   match ← 1-˜ (l+1)|⌊´ (↕⊸-l) × old (1<≠∘⊣)◶⟨⊑⊸=,≠∘⊢↑⍷⟩¨ <str
   cont ← (-⟜1⌈≤⟜1×⊢)` match ⊏ (≠¨old)∾0
   keep ← ⋈⟜(⊏⟜str) / 0=cont
@@ -126,7 +126,7 @@ ToBytes‿FromBytes ← {f𝕊g: {𝕊⁼:𝕨G𝕩;𝕨F𝕩}}{𝔽⋈𝔽˜}�
     GD←{k F ·‿c:               # Get grade and data
       ⟨i‿j,x‿y⟩←(2↑(k≤c)⊸⊔)¨𝕩  # Split into done and not done
       t←≍(a-2×k-b)⊸+⌾(1⊸⊑)i‿x  # Highest order byte if finished
-      {0<≠j ? t∾⟨j,a+b|y⟩∾(2÷˜k⌊b)F⟨j,⌊y÷b⟩ ; t} # Rest of bytes
+      {×≠j ? t∾⟨j,a+b|y⟩∾(2÷˜k⌊b)F⟨j,⌊y÷b⟩ ; t} # Rest of bytes
     }
     ⍋⊸⊏○∾˝⍉ ⌽ a GD ⟨↕≠𝕩,𝕩⟩
   }
@@ -194,6 +194,6 @@ ToNums ← {
 }
 
 # String similarity
-LcsLen ← ∧○(0<≠)◶⟨0, ¯1 ⊑ 0¨∘⊢ {𝕩⌈⌈`𝕨+»𝕩}˝ =⌜⟜⌽⟩
+LcsLen ← ∧○(×≠)◶⟨0, ¯1 ⊑ 0¨∘⊢ {𝕩⌈⌈`𝕨+»𝕩}˝ =⌜⟜⌽⟩
 Lcs ← ¯1 ⊑ "" <⊸∾ ""¨∘⊢ ⊣⍟(>○≠){𝕩𝔽¨𝔽`𝕨∾¨""<⊸»𝕩}˝ (=⌜⥊¨⊣)⟜⌽
 Levenshtein ← ¯1⊑{𝕨((1⊸+⥊+)○≠(⌊`⊢⌊⊏⊸»∘⊢-0∾1+=⟜𝕩)´⌽∘⊣)𝕩}

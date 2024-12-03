@@ -11,7 +11,7 @@ Parse ← s.Ints¨•file.Lines
 # Solutions
 Safe ← (∧´∘(1⊸≤∧≤⟜3)∘|∧(∨≡∧)∘×)fn.Deltas
 A    ← +´Safe¨
-B    ← +´{∨´Safe¨/⟜𝕩¨<˘¬=⌜˜↕≠𝕩}¨
+B    ← +´{∨´Safe∘/⟜𝕩˘≠⌜˜↕≠𝕩}¨
 
 # Tests
 u.UnitTest (A Parse testInput) ≡ 2

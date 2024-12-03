@@ -1,5 +1,5 @@
-u  ⇐ •Import "/home/cph/bqn-test/test.bqn"
-s  ⇐ •Import "/home/cph/bqn-code/lib/string.bqn"
+u ⇐ •Import "/home/cph/bqn-test/test.bqn"
+s ⇐ •Import "/home/cph/bqn-code/lib/string.bqn"
 
 testInput  ← "/home/cph/bqn-code/aoc/2024/data/03-test.txt"
 testInputB ← "/home/cph/bqn-code/aoc/2024/data/03-testb.txt"

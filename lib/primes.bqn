@@ -97,8 +97,8 @@ _getSegment ← {ind _𝕣:
 SieveSegment ← 0 _getSegment  # IsPrime¨   (⊣+↕∘-˜)´
 PrimesIn     ← 1 _getSegment  # IsPrime¨⊸/ (⊣+↕∘-˜)´
 
-NextPrime ← {        (0<≠)◶⟨𝕊1⊑R,  ⊑ ⟩ PrimesIn r←  𝕩+1‿65 }⚇0
-PrevPrime ← { !2<𝕩 ⋄ (0<≠)◶⟨𝕊0⊑R,¯1⊑⊢⟩ PrimesIn r←1⌈𝕩-64‿0 }⚇0
+NextPrime ← {        (×≠)◶⟨𝕊1⊑R,  ⊑ ⟩ PrimesIn r←  𝕩+1‿65 }⚇0
+PrevPrime ← { !2<𝕩 ⋄ (×≠)◶⟨𝕊0⊑R,¯1⊑⊢⟩ PrimesIn r←1⌈𝕩-64‿0 }⚇0
 
 IsPrime ← {
   CheckNat 𝕩

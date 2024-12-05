@@ -5,7 +5,7 @@ b  ⇐ •Import "/home/cph/bqn-code/lib/binary.bqn"
 
 SmallestNumber ← { ∧´b.Binary𝕩 ? 𝕩 ; 𝕊𝕩+1 }
 
-# # Tests
+# Tests
 u.UnitTest (SmallestNumber 5)  ≡ 7
 u.UnitTest (SmallestNumber 10) ≡ 15
 u.UnitTest (SmallestNumber 3)  ≡ 3

@@ -6,16 +6,16 @@ input     ← "/home/cph/bqn-code/aoc/2024/data/05.txt"
 
 # Parsing
 Parse ← { s.Ints¨¨s.Lines¨s.Lines2•file.Chars𝕩 }
-order‿lines ← Parse testInput
+orders‿lines ← Parse testInput
 
 # Solutions
-Co  ← (∨´·¬∊)∨(≤´⊐˜)    # correct order
-Aco ← { ∧´Co⟜𝕩¨orders } # all correct order
-M   ← ⊑(⌊2÷˜≠)⊸⊏
-A   ← +´Aco◶⟨0,Middle⟩¨
+Co     ← (∨´·¬∊)∨(≤´⊐˜)  # correct order
+Aco    ← ∧´(orders Co¨<) # all correct order
+Middle ← ⊑(⌊2÷˜≠)⊸⊏
+A      ← +´Aco◶⟨0,Middle⟩¨
 
 Insert ← ↑´∘⊢∾⊣∾↓´∘⊢
-Build  ← { l𝕊s: { ×≠l ? (1↓l)Build⊑Aco¨⊸/{(⊑l)Insert𝕩‿s}¨↕1+≠s ; s }}
+Build  ← { ×≠𝕨 ? (1↓𝕨)𝕊⊑Aco¨⊸/((⊑𝕨)Insert𝕩⋈˜⊢)¨↕1+≠𝕩 ; 𝕩 }
 Find   ← Middle Build⟜⟨⟩
 B      ← +´·Find¨¬∘Aco¨⊸/
 

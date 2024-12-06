@@ -9,12 +9,10 @@ Parse ← { s.Ints¨¨s.Lines¨s.Lines2•file.Chars𝕩 }
 orders‿lines ← Parse testInput
 
 # Solutions
-Grade   ← ⍒(∊⟜(>orders)⋈)⌜˜
-Correct ← ∧⊸≡
-Mid     ← (⌊2÷˜≠)⊸⊑
-
-A ← +´·Mid¨Correct∘Grade¨⊸/
-B ← +´·Mid¨Grade¨⊸(¬∘Correct¨∘⊣/⊏¨)
+Grade ← ⍒(∊⟜(>orders)⋈)⌜˜
+Mid   ← (⌊2÷˜≠)⊸⊑
+A     ← +´·Mid¨∧⊸≡∘Grade¨⊸/
+B     ← +´·Mid¨Grade¨⊸((¬∧⊸≡)¨∘⊣/⊏¨)
 
 # Tests
 u.UnitTest (A lines) ≡ 143

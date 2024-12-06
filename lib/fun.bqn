@@ -9,6 +9,7 @@ Differ ⇐ ≠ _AdjMap
 Group  ⇐ = _ChunkBy
 Rle    ⇐ >·(⊑⋈≠)¨Group
 Freq   ⇐ Rle∧
+Idxs   ⇐ /○⥊⟜(↕≢)
 
 FindFull ⇐ { Op ← {𝕩⌈˜𝕨-1} ⋄ m‿n ← 𝕨⋈○≠𝕩 ⋄ (1⌊·Op`m⊸×)n↑𝕨⍷𝕩 }
 

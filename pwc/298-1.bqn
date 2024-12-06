@@ -9,6 +9,6 @@ a ← >⟨⟨1, 0, 1, 0, 0⟩,
       ⟨1, 0, 1, 1, 1⟩,
       ⟨1, 1, 1, 1, 1⟩,
       ⟨1, 0, 0, 1, 0⟩⟩
-u.UnitTest (MaximalSquare a)           ≡ 4 
+u.UnitTest (MaximalSquare a)           ≡ 4
 u.UnitTest (MaximalSquare 2‿2⥊0‿1‿1‿0) ≡ 1
 u.UnitTest (MaximalSquare 1‿1⥊0)       ≡ 0

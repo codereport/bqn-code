@@ -1,10 +1,11 @@
 # Link: https://theweeklychallenge.org/blog/perl-weekly-challenge-298
 
-u ⇐ •Import "/home/cph/bqn-test/test.bqn"
+u  ⇐ •Import "/home/cph/bqn-test/test.bqn"
+fn ⇐ •Import "/home/cph/bqn-code/lib/fun.bqn"
 
 RightInterval ← {
     f‿l ← (⊑¨⋈⊢´¨)𝕩
-    (⊢(⊢-˜⊣×¬∘⊢)(≠𝕩)⊸=)f⊐{⌊´𝕩/f⊸×𝕩}˘l≤⌜f
+    f fn.Iono (⌊´/⟜(f⊸×))˘l≤⌜f
 }
 
 # Tests

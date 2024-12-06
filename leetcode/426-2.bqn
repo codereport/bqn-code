@@ -3,8 +3,8 @@
 u  ⇐ •Import "/home/cph/bqn-test/test.bqn"
 fn ⇐ •Import "/home/cph/bqn-code/lib/fun.bqn"
 
-GetLargestOutlier ← { 
-    pairs ← ⍷⌽¨⊸∾(∾⋈fn._Tri↕≠𝕩)⊏¨<𝕩 
+GetLargestOutlier ← {
+    pairs ← ⍷⌽¨⊸∾(∾⋈fn._Tri↕≠𝕩)⊏¨<𝕩
     ⌈´(+´𝕩)⊸((⊑∘⊢=-⟜(+´))×⊢´∘⊢)¨pairs
 }
 

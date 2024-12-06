@@ -9,17 +9,15 @@ Parse ← { s.Ints¨¨s.Lines¨s.Lines2•file.Chars𝕩 }
 orders‿lines ← Parse testInput
 
 # Solutions
-Co  ← (∨´·¬∊)∨(<´⊐˜)  # correct order
-Aco ← ∧´(orders Co¨<) # all correct order
-Mid ← (⌊2÷˜≠)⊸⊑
-A   ← +´Aco◶⟨0,Mid⟩¨
+Grade   ← ⍒(∊⟜(>orders)⋈)⌜˜
+Correct ← ∧⊸≡
+Mid     ← (⌊2÷˜≠)⊸⊑
 
-Insert ← ↑´∘⊢∾⊣∾↓´∘⊢
-Build  ← { ×≠𝕨 ? (1↓𝕨)𝕊⊑Aco¨⊸/((⊑𝕨)Insert𝕩⋈˜⊢)¨↕1+≠𝕩 ; 𝕩 }
-B      ← +´·(Mid Build⟜⟨⟩)¨¬∘Aco¨⊸/
+A ← +´·Mid¨Correct∘Grade¨⊸/
+B ← +´·Mid¨Grade¨⊸(¬∘Correct¨∘⊣/⊏¨)
 
 # Tests
 u.UnitTest (A lines) ≡ 143
-# u.UnitTest (A l) ≡ 5268
+# u.UnitTest (A lines) ≡ 5268
 u.UnitTest (B lines) ≡ 123
-# u.UnitTest (B l) ≡ 5799
+# u.UnitTest (B lines) ≡ 5799

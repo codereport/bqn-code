@@ -9,7 +9,7 @@ Parse ← { s.Ints¨¨s.Lines¨s.Lines2•file.Chars𝕩 }
 orders‿lines ← Parse testInput
 
 # Solutions
-Co  ← (∨´·¬∊)∨(≤´⊐˜)  # correct order
+Co  ← (∨´·¬∊)∨(<´⊐˜)  # correct order
 Aco ← ∧´(orders Co¨<) # all correct order
 Mid ← (⌊2÷˜≠)⊸⊑
 A   ← +´Aco◶⟨0,Mid⟩¨

@@ -9,7 +9,8 @@ Differ ⇐ ≠ _AdjMap
 Group  ⇐ = _ChunkBy
 Rle    ⇐ >·(⊑⋈≠)¨Group
 Freq   ⇐ Rle∧
-Idxs   ⇐ /○⥊⟜(↕≢)
+Idxs   ⇐ /○⥊⟜(↕≢)      # indices for higher ranks
+Iono   ⇐ ⊐(×-¬∘⊢)≠∘⊣≠⊐ # index of negative one
 
 FindFull ⇐ { Op ← {𝕩⌈˜𝕨-1} ⋄ m‿n ← 𝕨⋈○≠𝕩 ⋄ (1⌊·Op`m⊸×)n↑𝕨⍷𝕩 }
 

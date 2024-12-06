@@ -19,6 +19,6 @@ Trim      ⇐ (¬·(∧`⌾⌽∨∧`)' '=⊢)⊸/
 Lines   ⇐ nl⊸Split
 Lines2  ⇐ nl‿nl⊸Split
 Words   ⇐ ' '⊸Split
-Ints    ⇐ {•BQN¨(¬𝕩∊'0'+↕10)SplitMask𝕩}
+Ints    ⇐ { •BQN¨𝕩SplitMask˜¬𝕩∊'0'+↕10 }
 Unlines ⇐ nl⊸Join
 Unwords ⇐ ' '⊸Join

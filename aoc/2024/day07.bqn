@@ -12,7 +12,7 @@ Parse ← s.Ints¨•file.Lines
 Value ← {
     h‿t ← ⟨⊑𝕩,⌽1↓⊢𝕩⟩
     ops ← " "⊸(∾˜)¨"+×"fn.Choose˜2-˜≠𝕩
-    h×∨´h=•BQN¨(•Fmt¨t)⊸{∾⥊⍉𝕨≍𝕩}¨ops
+    h×∨´h=•BQN¨(•Repr¨t)⊸{∾⥊⍉𝕨≍𝕩}¨ops
 }
 
 Value2 ← { ops𝕊𝕩:
@@ -20,7 +20,7 @@ Value2 ← { ops𝕊𝕩:
     h×∨´h=(⍷·∾{a𝕊b:{b𝕏a}¨ops}¨)´t
 }
 
-A ← +´+‿×⊸Value2¨
+A ← +´+‿×⊸Value¨
 C ← •ParseFloat∾○•Repr # do not use •BQN / •Fmt
 B ← +´+‿×‿C⊸Value2¨
 

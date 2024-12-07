@@ -11,14 +11,21 @@ Parse ← s.Ints¨•file.Lines
 # Solutions
 Value ← {
     h‿t ← ⟨⊑𝕩,⌽1↓⊢𝕩⟩
-    ops ← " "⊸(∾˜)¨"+×"Choose˜2-˜≠𝕩
+    ops ← " "⊸(∾˜)¨"+×"fn.Choose˜2-˜≠𝕩
     h×∨´h=•BQN¨(•Fmt¨t)⊸{∾⥊⍉𝕨≍𝕩}¨ops
 }
-A ← +´+‿×⊸ValueFast¨
-B ← ⊢
+
+Value2 ← { ops𝕊𝕩:
+    h‿t ← ⟨⊑𝕩,⌽1↓⊢𝕩⟩
+    h×∨´h=(⍷·∾{a𝕊b:{b𝕏a}¨ops}¨)´t
+}
+
+A ← +´+‿×⊸Value2¨
+C ← •ParseFloat∾○•Repr # do not use •BQN / •Fmt
+B ← +´+‿×‿C⊸Value2¨
 
 # Tests
 u.UnitTest (A Parse testInput) ≡ 3749
-u.UnitTest (A Parse input)     ≡ 7885693428401
-# u.UnitTest (B Parse testInput) ≡ 1
-# u.UnitTest (B Parse input)     ≡ 1
+# u.UnitTest (A Parse input)   ≡ 7885693428401
+u.UnitTest (B Parse testInput) ≡ 11387
+# u.UnitTest (B Parse input)   ≡ 348360680516005

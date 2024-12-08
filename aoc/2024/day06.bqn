@@ -17,8 +17,8 @@ Move ← { g𝕊sf‿pos‿dir:
     np‿c‿m ← ⟨pos,0,×´≢g⟩ # new position‿count‿max
     sf { 𝕊: np ↩ pos+dir⊑dx ⋄ c ↩ c+1
         (c>m)∨sf Oob np ? ∞ ; '#'≡np⊑g ? dir ↩ 4|1+dir ;
-        •Delay 0.1 ⋄ term.Clear@
-        •Out˘ "🎄🎅🧱"⊏˜(2×'#'=g)+1⌊sf
+        # •Delay 0.1 ⋄ term.Clear@
+        # •Out˘ "🎄🎅🧱"⊏˜(2×'#'=g)+1⌊sf
         sf ↩ sf+(1⊸+)⌾(np⊸⊑)sf ⋄ pos ↩ np
     }•_while_(¬Oob)np
     (+´⥊1⌊sf)⋈c>m

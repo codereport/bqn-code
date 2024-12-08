@@ -20,7 +20,7 @@ Value2 ← { ops𝕊𝕩:
     h×∨´h=(⍷·∾{a𝕊b:{b𝕏a}¨ops}¨)´t
 }
 
-A ← +´+‿×⊸Value¨
+A ← +´+‿×⊸Value2¨
 C ← •ParseFloat∾○•Repr # do not use •BQN / •Fmt
 B ← +´+‿×‿C⊸Value2¨
 

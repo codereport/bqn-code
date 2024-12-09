@@ -8,10 +8,9 @@ in ← "/home/cph/bqn-code/aoc/2024/data/08-test.txt"
 g ← >•file.Lines in # grid
 
 # Solutions
-c   ← (⊐⊑⟜g)⊸⊔fn.I'.'≠g               # coordinates
-Ib  ← ∧´(0‿0⊸≤)∾(≢g)⊸>                # in bounds
-Dx  ← { a‿b𝕊d:(a⊸+⋈b⊸-)¨d }           # delta
-_An ← { Ib¨⊸/∾∾ Dx⟜(𝔽-´) ¨fn.Pairs𝕩 } # antinode
+c   ← (⊐⊑⟜g)⊸⊔fn.I'.'≠g                  # coordinates
+Ib  ← ∧´(0‿0⊸≤)∾(≢g)⊸>                   # in bounds
+_An ← { Ib¨⊸/∾∾+⚇1⟜(⋈⟜-·𝔽-´)¨fn.Pairs𝕩 } # antinode
 
 _Solve ← { ≠⍷∾𝔽¨𝕩 }
 A      ← ({⟨𝕩⟩}       _An) _Solve

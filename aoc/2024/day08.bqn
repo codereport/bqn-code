@@ -9,15 +9,18 @@ input     ← "/home/cph/bqn-code/aoc/2024/data/08.txt"
 Parse ← >•file.Lines
 
 # Solutions
+Cx ← { (⊐⊑⟜𝕩¨)⊸⊔fn.Idxs'.'≠𝕩 }     # coordinates
 Ib ← ∧´(0‿0≤⊢)∾≢⊸>                 # in bounds
-Dx ← {d𝕊a‿b:(a+d)⋈b-d}             # delta
-An ← { 𝕨⊸Ib¨⊸/⥊-´⊸Dx˘>∾⋈fn._Tri˜𝕩} # antinode
-A  ← {≠⍷∾𝕩⊸An¨(⊐⊑⟜𝕩¨)⊸⊔fn.Idxs'.'≠𝕩}
+Dx ← +⟜⊑⋈-˜⟜(⊢´)                   # delta
+An ← { 𝕨⊸Ib¨⊸/∾-´⊸Dx¨∾⋈fn._Tri˜𝕩 } # antinode
+A  ← { ≠⍷∾(𝕩⊸An⊢)¨Cx𝕩 }
 
-B ← ⊢
+Dx2 ← { n‿d𝕊a‿b:((b⊸-)⋈a⊸+)¨d⊸×¨↕n }            # delta
+An2 ← { 𝕨⊸Ib¨⊸/∾∾(((⌈´≢𝕨)⋈-´)⊸Dx2)¨∾⋈fn._Tri˜𝕩} # antinode
+B   ← { ≠⍷∾𝕩⊸An2¨Cx𝕩 }
 
 # Tests
 u.UnitTest (A Parse testInput) ≡ 14
-u.UnitTest (A Parse input)     ≡ 1
-# u.UnitTest (B Parse testInput) ≡ 1
-# u.UnitTest (B Parse input)     ≡ 1
+u.UnitTest (A Parse input)     ≡ 293
+u.UnitTest (B Parse testInput) ≡ 34
+u.UnitTest (B Parse input)     ≡ 934

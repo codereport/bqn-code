@@ -24,8 +24,8 @@ Move ← { g𝕊sf‿pos‿dir:
     (+´⥊1⌊sf)⋈c>m
 }
 
-A ← { ⊑𝕩Move(⋈⟜(⊑fn.Idxs)"^"⍷𝕩)∾0 }
-B ← { +´⊢´¨Move⟜((⋈⟜(⊑fn.Idxs)"^"⍷𝕩)∾0)¨(fn.Idxs'#'≠𝕩)Mg¨<𝕩 }
+A ← { ⊑𝕩Move(⋈⟜(⊑fn.I)"^"⍷𝕩)∾0 }
+B ← { +´⊢´¨Move⟜((⋈⟜(⊑fn.I)"^"⍷𝕩)∾0)¨(fn.I'#'≠𝕩)Mg¨<𝕩 }
 
 # Tests
 u.UnitTest (A Parse testInput) ≡ 41

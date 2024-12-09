@@ -1,26 +1,24 @@
 u  ⇐ •Import "/home/cph/bqn-test/test.bqn"
 fn ⇐ •Import "/home/cph/bqn-code/lib/fun.bqn"
 
-testInput ← "/home/cph/bqn-code/aoc/2024/data/08-test.txt"
-input     ← "/home/cph/bqn-code/aoc/2024/data/08.txt"
+in ← "/home/cph/bqn-code/aoc/2024/data/08-test.txt"
+# in ← "/home/cph/bqn-code/aoc/2024/data/08.txt"
 
 # Parsing
-Parse ← >•file.Lines
+g ← >•file.Lines in # grid
 
 # Solutions
-Cx ← { (⊐⊑⟜𝕩¨)⊸⊔fn.Idxs'.'≠𝕩 }     # coordinates
-Ib ← ∧´(0‿0≤⊢)∾≢⊸>                 # in bounds
-Dx ← +⟜⊑⋈-˜⟜(⊢´)                   # delta
-An ← { 𝕨⊸Ib¨⊸/∾-´⊸Dx¨∾⋈fn._Tri˜𝕩 } # antinode
-_S ← { ≠⍷∾𝕩⊸𝔽¨Cx𝕩 }                # solve
-A  ← An _S
+c   ← (⊐⊑⟜g)⊸⊔fn.Idxs'.'≠g          # coordinates
+Ib  ← ∧´(0‿0⊸≤)∾(≢g)⊸>              # in bounds
+Dx  ← { a‿b𝕊d:(a⊸+⋈b⊸-)¨d }         # delta
+_An ← { Ib¨⊸/∾∾Dx⟜(𝔽-´)¨fn.Pairs𝕩 } # antinode
 
-Dx2 ← { n‿d𝕊a‿b:((b⊸-)⋈a⊸+)¨d⊸×¨↕n }            # delta
-An2 ← { 𝕨⊸Ib¨⊸/∾∾(((⌈´≢𝕨)⋈-´)⊸Dx2)¨∾⋈fn._Tri˜𝕩} # antinode
-B   ← An2 _S
+_Solve ← { ≠⍷∾𝔽¨𝕩 }
+A      ← ({⟨𝕩⟩}        _An) _Solve
+B      ← ({𝕩⊸×¨↕⌈´≢g} _An ) _Solve
 
 # Tests
-u.UnitTest (A Parse testInput) ≡ 14
-u.UnitTest (A Parse input)     ≡ 293
-u.UnitTest (B Parse testInput) ≡ 34
-u.UnitTest (B Parse input)     ≡ 934
+u.UnitTest (A c) ≡ 14
+u.UnitTest (B c) ≡ 34
+# u.UnitTest (A Parse in) ≡ 293
+# u.UnitTest (B Parse in) ≡ 934

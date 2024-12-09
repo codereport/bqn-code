@@ -1,5 +1,4 @@
 u  ⇐ •Import "/home/cph/bqn-test/test.bqn"
-s  ⇐ •Import "/home/cph/bqn-code/lib/string.bqn"
 fn ⇐ •Import "/home/cph/bqn-code/lib/fun.bqn"
 
 testInput ← "/home/cph/bqn-code/aoc/2024/data/08-test.txt"
@@ -13,11 +12,12 @@ Cx ← { (⊐⊑⟜𝕩¨)⊸⊔fn.Idxs'.'≠𝕩 }     # coordinates
 Ib ← ∧´(0‿0≤⊢)∾≢⊸>                 # in bounds
 Dx ← +⟜⊑⋈-˜⟜(⊢´)                   # delta
 An ← { 𝕨⊸Ib¨⊸/∾-´⊸Dx¨∾⋈fn._Tri˜𝕩 } # antinode
-A  ← { ≠⍷∾(𝕩⊸An⊢)¨Cx𝕩 }
+_S ← { ≠⍷∾𝕩⊸𝔽¨Cx𝕩 }                # solve
+A  ← An _S
 
 Dx2 ← { n‿d𝕊a‿b:((b⊸-)⋈a⊸+)¨d⊸×¨↕n }            # delta
 An2 ← { 𝕨⊸Ib¨⊸/∾∾(((⌈´≢𝕨)⋈-´)⊸Dx2)¨∾⋈fn._Tri˜𝕩} # antinode
-B   ← { ≠⍷∾𝕩⊸An2¨Cx𝕩 }
+B   ← An2 _S
 
 # Tests
 u.UnitTest (A Parse testInput) ≡ 14

@@ -1,14 +1,14 @@
 # Link: https://theweeklychallenge.org/blog/perl-weekly-challenge-299
 
 u  ⇐ •Import "/home/cph/bqn-test/test.bqn"
+h  ⇐ •Import "/home/cph/bqn-code/lib/helper.bqn"
 fn ⇐ •Import "/home/cph/bqn-code/lib/fun.bqn"
 
 WordSearch ← { t𝕊grid:
     deltas ← ⟨0‿1,0‿¯1,1‿0,¯1‿0⟩
-    Ib     ← ∧´(0‿0⊸≤)∾(≢grid)⊸> # in bounds
     Rec ← { pos𝕊l‿d: {
         ¬l fn.IsPrefix t ? 0 ; t=○≠l ? 1 ;
-        npos ← (Ib∧{¬∨´⥊𝕩⊸≡¨d})¨⊸/pos⊸+¨deltas
+        npos ← (grid⊸h.Ib∧{¬∨´⥊𝕩⊸≡¨d})¨⊸/pos⊸+¨deltas
         ∨´Rec⟜⟨l∾pos⊑grid,d∾<pos⟩¨npos }
     }
     ∨´Rec⟜⟨"",⟨⟩⟩¨fn.I 1⥊˜≢grid

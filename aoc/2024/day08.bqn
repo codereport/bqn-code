@@ -1,4 +1,5 @@
 u  ⇐ •Import "/home/cph/bqn-test/test.bqn"
+h  ⇐ •Import "/home/cph/bqn-code/lib/helper.bqn"
 fn ⇐ •Import "/home/cph/bqn-code/lib/fun.bqn"
 
 in ← "/home/cph/bqn-code/aoc/2024/data/08-test.txt"
@@ -8,9 +9,8 @@ in ← "/home/cph/bqn-code/aoc/2024/data/08-test.txt"
 g ← >•file.Lines in # grid
 
 # Solutions
-c   ← (⊐⊑⟜g)⊸⊔fn.I'.'≠g                  # coordinates
-Ib  ← ∧´(0‿0⊸≤)∾(≢g)⊸>                   # in bounds
-_An ← { Ib¨⊸/∾∾+⚇1⟜(⋈⟜-·𝔽-´)¨fn.Pairs𝕩 } # antinode
+c   ← (⊐⊑⟜g)⊸⊔fn.I'.'≠g                      # coordinates
+_An ← { g⊸h.Ib¨⊸/∾∾+⚇1⟜(⋈⟜-·𝔽-´)¨fn.Pairs𝕩 } # antinode
 
 _Solve ← { ≠⍷∾𝔽¨𝕩 }
 A      ← ({⟨𝕩⟩}       _An) _Solve

@@ -1,4 +1,5 @@
 u    ⇐ •Import "/home/cph/bqn-test/test.bqn"
+h    ⇐ •Import "/home/cph/bqn-code/lib/helper.bqn"
 fn   ⇐ •Import "/home/cph/bqn-code/lib/fun.bqn"
 term ⇐ •Import "/home/cph/bqn-code/lib/terminal.bqn"
 
@@ -9,18 +10,17 @@ input     ← "/home/cph/bqn-code/aoc/2024/data/06.txt"
 Parse ← >•file.Lines
 
 # Solutions
-dx  ← ⟨¯1‿0,0‿1,1‿0,0‿¯1⟩ # deltas
-Oob ← ∨´(0‿0>⊢)∾≢⊸≤       # out of bounds
-Mg  ← {(-⟜11)⌾(𝕨⊸⊑)𝕩}     # modify grid
+dx ← ⟨¯1‿0,0‿1,1‿0,0‿¯1⟩ # deltas
+Mg ← {(-⟜11)⌾(𝕨⊸⊑)𝕩}     # modify grid
 
 Move ← { g𝕊sf‿pos‿dir:
     np‿c‿m ← ⟨pos,0,×´≢g⟩ # new position‿count‿max
     sf { 𝕊: np ↩ pos+dir⊑dx ⋄ c ↩ c+1
-        (c>m)∨sf Oob np ? ∞ ; '#'≡np⊑g ? dir ↩ 4|1+dir ;
+        (c>m)∨¬sf h.Ib np ? ∞ ; '#'≡np⊑g ? dir ↩ 4|1+dir ;
         # •Delay 0.1 ⋄ term.Clear@
         # •Out˘ "🎄🎅🧱"⊏˜(2×'#'=g)+1⌊sf
         sf ↩ sf+(1⊸+)⌾(np⊸⊑)sf ⋄ pos ↩ np
-    }•_while_(¬Oob)np
+    }•_while_(h.Ib)np
     (+´⥊1⌊sf)⋈c>m
 }
 

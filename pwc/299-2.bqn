@@ -8,7 +8,7 @@ WordSearch ← { t𝕊grid:
     Ib     ← ∧´(0‿0⊸≤)∾(≢grid)⊸> # in bounds
     Rec ← { pos𝕊l‿d: {
         ¬l fn.IsPrefix t ? 0 ; t=○≠l ? 1 ;
-        npos ← (Ib∧{¬∨´⥊𝕩⊸≡¨d})¨⊸/ pos⊸+¨deltas
+        npos ← (Ib∧{¬∨´⥊𝕩⊸≡¨d})¨⊸/pos⊸+¨deltas
         ∨´Rec⟜⟨l∾pos⊑grid,d∾<pos⟩¨npos }
     }
     ∨´Rec⟜⟨"",⟨⟩⟩¨fn.I 1⥊˜≢grid

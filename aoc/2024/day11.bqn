@@ -1,8 +1,8 @@
 u  ⇐ •Import "/home/cph/bqn-test/test.bqn"
 s  ⇐ •Import "/home/cph/bqn-code/lib/string.bqn"
 
-testInput ← "/home/cph/bqn-code/aoc/2024/data/11-test.txt"
-input     ← "/home/cph/bqn-code/aoc/2024/data/11.txt"
+testInput ← •path∾"/data/11-test.txt"
+input     ← •path∾"/data/11.txt"
 
 # heavily inspired by: https://github.com/jhfranklin/aoc/blob/main/2024/11.bqn
 

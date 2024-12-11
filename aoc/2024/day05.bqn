@@ -1,8 +1,8 @@
 u ⇐ •Import "/home/cph/bqn-test/test.bqn"
 s ⇐ •Import "/home/cph/bqn-code/lib/string.bqn"
 
-testInput ← "/home/cph/bqn-code/aoc/2024/data/05-test.txt"
-input     ← "/home/cph/bqn-code/aoc/2024/data/05.txt"
+testInput ← •path∾"/data/05-test.txt"
+input     ← •path∾"/data/05.txt"
 
 # Parsing
 Parse ← { s.Ints¨¨s.Lines¨s.Lines2•file.Chars𝕩 }

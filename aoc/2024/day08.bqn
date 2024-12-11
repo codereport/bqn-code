@@ -2,8 +2,8 @@ u  ⇐ •Import "/home/cph/bqn-test/test.bqn"
 h  ⇐ •Import "/home/cph/bqn-code/lib/helper.bqn"
 fn ⇐ •Import "/home/cph/bqn-code/lib/fun.bqn"
 
-in ← "/home/cph/bqn-code/aoc/2024/data/08-test.txt"
-# in ← "/home/cph/bqn-code/aoc/2024/data/08.txt"
+in ← •path∾"/data/08-test.txt"
+# in ← •path∾"/data/08.txt"
 
 # Parsing
 g ← >•file.Lines in # grid

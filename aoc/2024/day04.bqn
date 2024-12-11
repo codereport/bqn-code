@@ -1,7 +1,7 @@
 u ⇐ •Import "/home/cph/bqn-test/test.bqn"
 
-testInput ← "/home/cph/bqn-code/aoc/2024/data/04-test.txt"
-input     ← "/home/cph/bqn-code/aoc/2024/data/04.txt"
+testInput ← •path∾"/data/04-test.txt"
+input     ← •path∾"/data/04.txt"
 
 # Parsing
 Parse ← >•file.Lines

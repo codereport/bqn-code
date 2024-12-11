@@ -2,8 +2,8 @@ u  ⇐ •Import "/home/cph/bqn-test/test.bqn"
 h  ⇐ •Import "/home/cph/bqn-code/lib/helper.bqn"
 fn ⇐ •Import "/home/cph/bqn-code/lib/fun.bqn"
 
-testInput ← "/home/cph/bqn-code/aoc/2024/data/10-test.txt"
-input     ← "/home/cph/bqn-code/aoc/2024/data/10.txt"
+testInput ← •path∾"/data/10-test.txt"
+input     ← •path∾"/data/10.txt"
 
 # Parsing
 Parse ← -⟜'0'·>•file.Lines

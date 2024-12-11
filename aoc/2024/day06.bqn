@@ -3,8 +3,8 @@ h    ⇐ •Import "/home/cph/bqn-code/lib/helper.bqn"
 fn   ⇐ •Import "/home/cph/bqn-code/lib/fun.bqn"
 term ⇐ •Import "/home/cph/bqn-code/lib/terminal.bqn"
 
-testInput ← "/home/cph/bqn-code/aoc/2024/data/06-test.txt"
-input     ← "/home/cph/bqn-code/aoc/2024/data/06.txt"
+testInput ← •path∾"/data/06-test.txt"
+input     ← •path∾"/data/06.txt"
 
 # Parsing
 Parse ← >•file.Lines

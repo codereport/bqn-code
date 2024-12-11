@@ -7,19 +7,18 @@ testInput ← "/home/cph/bqn-code/aoc/2024/data/10-test.txt"
 input     ← "/home/cph/bqn-code/aoc/2024/data/10.txt"
 
 # Parsing
-Parse ← •ParseFloat∘⥊¨·>•file.Lines
+Parse ← -⟜'0'·>•file.Lines
 
 # Solutions
-Box ← {⟨𝕩⟩}
 Peaks ← { ps𝕊g:
     p ← ⊑⌽ps ⋄ n ← p⊑g ⋄ { 9=n ?
     # •Delay 0.25 ⋄ term.Clear@
     # •Out˘ "🎄🔴🟠🟡🟢🔵🟣⚪⚫🏁"⊏˜(↕≠ps)⊸+⌾(ps⊸⊑) 0⥊˜≢g
-    p ; nxt ← ((n+1)=⊑⟜g)¨⊸/g⊸h.Ib¨⊸/p⊸+¨h.del4
-    { ×≠nxt ? ∾Peaks⟜g¨ps⊸∾¨Box¨nxt ; ⟨⟩ }}
+    p ; next ← ((n+1)=⊑⟜g)¨⊸/g⊸h.Ib¨⊸/p⊸+¨h.del4
+    { ×≠next ? ∾Peaks⟜g¨ps⊸∾¨⋈¨next ; ⟨⟩ }}
 }
 
-Solve ← { ∘‿2⊸⥊¨Peaks⟜𝕩¨Box¨fn.I 0= 𝕩 }
+Solve ← { ∘‿2⊸⥊¨Peaks⟜𝕩¨⋈¨fn.I 0=𝕩 }
 A     ← +´·≠∘⍷¨Solve
 B     ← +´·≠  ¨Solve
 

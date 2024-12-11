@@ -6,12 +6,12 @@ testInput ← "/home/cph/bqn-code/aoc/2024/data/10-test.txt"
 input     ← "/home/cph/bqn-code/aoc/2024/data/10.txt"
 
 # Parsing
-Parse ← •ParseFloat∘⥊¨·>•file.Lines
+Parse ← -⟜'0'·>•file.Lines
 
 # Solutions
 Peaks ← { p𝕊g: n ← p⊑g ⋄ { 9=n ? p ;
-    nxt ← ((n+1)=⊑⟜g)¨⊸/g⊸h.Ib¨⊸/p⊸+¨h.del4
-    { ×≠nxt ? ∾Peaks⟜g¨nxt ; ⟨⟩ }}
+    next ← ((n+1)=⊑⟜g)¨⊸/g⊸h.Ib¨⊸/p⊸+¨h.del4
+    { ×≠next ? ∾Peaks⟜g¨next ; ⟨⟩ }}
 }
 
 Solve ← { ∘‿2⊸⥊¨Peaks⟜𝕩¨fn.I 0= 𝕩 }

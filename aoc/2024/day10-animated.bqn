@@ -10,15 +10,14 @@ input     ← "/home/cph/bqn-code/aoc/2024/data/10.txt"
 Parse ← -⟜'0'·>•file.Lines
 
 # Solutions
-Peaks ← { ps𝕊g:
-    p ← ⊑⌽ps ⋄ n ← p⊑g ⋄ { 9=n ?
+Peaks ← { ps𝕊g: p ← ⊑⌽ps ⋄ x‿y ← 0‿1+p⊑g ⋄ { 9=x ?
     # •Delay 0.25 ⋄ term.Clear@
     # •Out˘ "🎄🔴🟠🟡🟢🔵🟣⚪⚫🏁"⊏˜(↕≠ps)⊸+⌾(ps⊸⊑) 0⥊˜≢g
-    p ; next ← ((n+1)=⊑⟜g)¨⊸/g⊸h.Ib¨⊸/p⊸+¨h.del4
-    { ×≠next ? ∾Peaks⟜g¨ps⊸∾¨⋈¨next ; ⟨⟩ }}
+    p ; next ← (y=⊑⟜g)⊸/g⊸h.Ib¨⊸/p⊸+¨h.del4
+    ×≠next ? ∾Peaks⟜g¨ps⊸∾¨⋈¨next ; ⟨⟩ }
 }
 
-Solve ← { ∘‿2⊸⥊¨Peaks⟜𝕩¨⋈¨fn.I 0=𝕩 }
+Solve ← { ∘‿2⊸⥊¨Peaks⟜𝕩¨⋈¨∧fn.I 0=𝕩 }
 A     ← +´·≠∘⍷¨Solve
 B     ← +´·≠  ¨Solve
 

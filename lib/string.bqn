@@ -14,6 +14,7 @@ Upper     ⇐ -⟜(32×1="a{"⊸⍋) # from BQN Crate
 IsLower   ⇐ ∨´('a'+↕26)⊸=
 IsUpper   ⇐ ∨´('A'+↕26)⊸=
 Trim      ⇐ (¬·(∧`⌾⌽∨∧`)' '=⊢)⊸/
+Trim2     ⇐ (¬·(∧`⌾⌽∨∧`)'.'=⊢)⊸/
 
 # From Haskell
 Lines   ⇐ nl⊸Split

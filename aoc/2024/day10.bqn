@@ -9,11 +9,7 @@ input     ← "/home/cph/bqn-code/aoc/2024/data/10.txt"
 Parse ← -⟜'0'·>•file.Lines
 
 # Solutions
-Peaks ← { p𝕊g: x‿y ← 0‿1+p⊑g ⋄ { 9=x ? p ;
-    next ← (y=⊑⟜g)⊸/g⊸h.Ib¨⊸/p⊸+¨h.del4
-    ×≠next ? ∾Peaks⟜g¨next ; ⟨⟩ }
-}
-
+Peaks ← { p𝕊g: x‿y ← 0‿1+p⊑g ⋄ { 9=x ? p ; ∾Peaks⟜g¨(y=⊑⟜g)⊸/g⊸h.Ib¨⊸/p⊸+¨h.del4 } }
 Solve ← { ∘‿2⊸⥊¨Peaks⟜𝕩¨fn.I 0= 𝕩 }
 A     ← +´·≠∘⍷¨Solve
 B     ← +´·≠  ¨Solve

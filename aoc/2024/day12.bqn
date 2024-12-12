@@ -21,12 +21,18 @@ FloodFill ← { g𝕊ps‿up‿f: # positions‿fence
     { (1<≠up)∨×+´m2  ? g FloodFill ⟨nps,⍷(1↓up)∾m2/in,nf⟩ ; nps‿nf }
 }
 
-A ← { +´≠⊸×´¨⍷ 𝕩⊸FloodFill¨{(⋈⟨⟩)∾0⋈˜⋈𝕩}¨fn.I 'A'≤𝕩 }
-B ← ⊢ # TODO
+Plots ← { ⍷ 𝕩⊸FloodFill¨{(⋈⟨⟩)∾0⋈˜⋈𝕩}¨fn.I 'A'≤𝕩 }
+A     ← { +´≠⊸×´¨Plots 𝕩 }
+
+sq    ← ⟨⟨⟨0,0⟩,⟨1,0⟩,⟨1,1⟩,⟨0,1⟩⟩,⟨⟨0,0⟩,⟨0,1⟩,⟨¯1,1⟩,⟨¯1,0⟩⟩,⟨⟨0,0⟩,⟨¯1,0⟩,⟨¯1,¯1⟩,⟨0,¯1⟩⟩,⟨⟨0,0⟩,⟨0,¯1⟩,⟨1,¯1⟩,⟨1,0⟩⟩⟩
+cp    ← 'x'=∾⟨⋈"xx.x",(↕4)⌽¨<"x...",(↕2)⌽¨<"x.x."⟩ # corner patterns
+Sides ← { g𝕊p: +´{ 𝕩⊸≡¨cp }¨{ (g⊸h.Ib)◶⟨0,p=○(⊑⟜g)⊢⟩¨p⊸+¨𝕩 }¨sq }
+B     ← { +´(≠×(+´·∾𝕩⊸Sides¨))¨⊑¨Plots 𝕩 }
 
 # Test
 u.UnitTest (A Parse miniInput) ≡ 140
 u.UnitTest (A Parse testInput) ≡ 1930
-# u.UnitTest (A Parse input)     ≡ 1374934
-# u.UnitTest (B Parse testInput) ≡ 1
-# u.UnitTest (B Parse input)     ≡ 1
+# u.UnitTest (A Parse input)   ≡ 1374934
+u.UnitTest (B Parse miniInput) ≡ 80
+u.UnitTest (B Parse testInput) ≡ 1206
+# u.UnitTest (B Parse input)   ≡ 841078

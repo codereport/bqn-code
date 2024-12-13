@@ -10,17 +10,17 @@ input     ← •path∾"/data/13.txt"
 Parse ← { { ∾∾s.Ints¨¨¯2⊸↑¨s.Words¨𝕩 }¨s.Lines¨s.Lines2•file.Chars𝕩 }
 
 # Solutions
-Tokens ← {
-    a‿b‿c ← <˘∘‿2⥊𝕩
-    r ← ((∧´⌊⊸=)∧=´)¨⊸/÷⟜a¨(∧´0⊸≤)¨⊸/c⊸-¨b⊸×¨↕⌈´⌈c÷b
-    (×≠)◶0‿{y←⊑b÷˜c-a×x←⊑⊑𝕩 ⋄ y+3×x } r
+Tokens ← { a‿b‿c ← <˘∘‿2⥊𝕩
+    Det ← -´∘×⟜⌽
+    r   ← ⟨c Det b, a Det c⟩ ÷ a Det b
+    (+´3‿1⊸××(∧´⌊⊸=))r
 }
 
 A ← +´Tokens¨
-B ← ⊢ # TODO
+B ← +´·Tokens¨(1e13⊸+)⌾(4‿5⊸⊏)¨
 
 # Tests
 u.UnitTest (A Parse testInput) ≡ 480
-# u.UnitTest (A Parse input)     ≡ 28753
-# u.UnitTest (B Parse testInput) ≡ 1
-# u.UnitTest (B Parse input)     ≡ 1
+# u.UnitTest (A Parse input)   ≡ 28753
+u.UnitTest (B Parse testInput) ≡ 875318608908
+# u.UnitTest (B Parse input)   ≡ 102718967795500

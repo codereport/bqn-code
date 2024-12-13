@@ -1,7 +1,5 @@
 u  ⇐ •Import "/home/cph/bqn-test/test.bqn"
 s  ⇐ •Import "/home/cph/bqn-code/lib/string.bqn"
-h  ⇐ •Import "/home/cph/bqn-code/lib/helper.bqn"
-fn ⇐ •Import "/home/cph/bqn-code/lib/fun.bqn"
 
 testInput ← •path∾"/data/13-test.txt"
 input     ← •path∾"/data/13.txt"

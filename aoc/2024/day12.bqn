@@ -22,12 +22,12 @@ FloodFill ← { g𝕊ps‿up‿f: # positions‿fence
 }
 
 Plots ← { ⍷ 𝕩⊸FloodFill¨{(⋈⟨⟩)∾0⋈˜⋈𝕩}¨fn.I 'A'≤𝕩 }
-A     ← { +´≠⊸×´¨Plots 𝕩 }
+A     ← +´·≠⊸×´¨Plots
 
 sq    ← ⟨⟨⟨0,0⟩,⟨1,0⟩,⟨1,1⟩,⟨0,1⟩⟩,⟨⟨0,0⟩,⟨0,1⟩,⟨¯1,1⟩,⟨¯1,0⟩⟩,⟨⟨0,0⟩,⟨¯1,0⟩,⟨¯1,¯1⟩,⟨0,¯1⟩⟩,⟨⟨0,0⟩,⟨0,¯1⟩,⟨1,¯1⟩,⟨1,0⟩⟩⟩
 cp    ← 'x'=∾⟨⋈"xx.x",(↕4)⌽¨<"x...",(↕2)⌽¨<"x.x."⟩ # corner patterns
-Sides ← { g𝕊p: +´{ 𝕩⊸≡¨cp }¨{ (g⊸h.Ib)◶⟨0,p=○(⊑⟜g)⊢⟩¨p⊸+¨𝕩 }¨sq }
-B     ← { +´(≠×(+´·∾𝕩⊸Sides¨))¨⊑¨Plots 𝕩 }
+Sides ← { +´(cp≡⚇1˜⊢)¨((𝕨⊸h.Ib)◶⟨0,𝕩=○(⊑⟜𝕨)⊢⟩¨𝕩⊸+¨)¨sq }
+B     ← { +´(≠×(+´·∾𝕩⊸Sides¨))¨⊑¨Plots𝕩 }
 
 # Test
 u.UnitTest (A Parse miniInput) ≡ 140

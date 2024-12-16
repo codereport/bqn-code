@@ -5,7 +5,7 @@ fn ⇐ •Import "/home/cph/bqn-code/lib/fun.bqn"
 
 BeautifulArrangements ← {
     x‿n       ← (1+↕𝕩)‿0
-    Beautiful ← ∧´(|˜∨○(0⊸=)|)⟜(1+↕∘≠)
+    Beautiful ← ∧´(|˜∨○(0⊸=)|)⟜x
     { n ↩ n + Beautiful 𝕩 ⋄ fn.Next 𝕩 }•_while_(∨⊸≢) x
     n + Beautiful ⌽x
 }

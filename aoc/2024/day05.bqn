@@ -5,7 +5,7 @@ testInput ← •path∾"/data/05-test.txt"
 input     ← •path∾"/data/05.txt"
 
 # Parsing
-Parse        ← { s.Ints¨¨s.Lines¨s.Lines2•file.Chars𝕩 }
+Parse        ← { s.Nats¨¨s.Lines¨s.Lines2•file.Chars𝕩 }
 orders‿lines ← Parse testInput
 
 # Solutions

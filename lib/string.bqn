@@ -20,6 +20,7 @@ Trim2     ⇐ (¬·(∧`⌾⌽∨∧`)'.'=⊢)⊸/
 Lines   ⇐ nl⊸Split
 Lines2  ⇐ nl‿nl⊸Split
 Words   ⇐ ' '⊸Split
-Ints    ⇐ { •BQN¨𝕩SplitMask˜¬𝕩∊'0'+↕10 }
+Ints    ⇐ { •BQN¨𝕩SplitMask˜¬𝕩∊'-'∾'0'+↕10 }
+Nats    ⇐ { •BQN¨𝕩SplitMask˜¬𝕩∊'0'+↕10 }
 Unlines ⇐ nl⊸Join
 Unwords ⇐ ' '⊸Join

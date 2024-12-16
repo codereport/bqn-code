@@ -6,7 +6,7 @@ testInput ← •path∾"/data/02-test.txt"
 input     ← •path∾"/data/02.txt"
 
 # Parsing
-Parse ← s.Ints¨•file.Lines
+Parse ← s.Nats¨•file.Lines
 
 # Solutions
 Safe ← (∧´∘(1⊸≤∧≤⟜3)∘|∧(∨≡∧)∘×)fn.Deltas

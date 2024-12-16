@@ -5,7 +5,7 @@ testInput ← •path∾"/data/13-test.txt"
 input     ← •path∾"/data/13.txt"
 
 # Parsing
-Parse ← { { ∾∾s.Ints¨¨¯2⊸↑¨s.Words¨𝕩 }¨s.Lines¨s.Lines2•file.Chars𝕩 }
+Parse ← { { ∾∾s.Nats¨¨¯2⊸↑¨s.Words¨𝕩 }¨s.Lines¨s.Lines2•file.Chars𝕩 }
 
 # Solutions
 Tokens ← { a‿b‿c ← <˘∘‿2⥊𝕩

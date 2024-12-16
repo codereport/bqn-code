@@ -7,7 +7,7 @@ input     ← •path∾"/data/11.txt"
 # heavily inspired by: https://github.com/jhfranklin/aoc/blob/main/2024/11.bqn
 
 # Parsing
-Parse ← (⍷⋈/⁼∘⊐)·s.Ints•file.Chars
+Parse ← (⍷⋈/⁼∘⊐)·s.Nats•file.Chars
 
 # Solutions
 Cut   ← •ParseFloat˘2‿∘⥊⊢

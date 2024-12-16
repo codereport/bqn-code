@@ -6,7 +6,7 @@ testInput ← •path∾"/data/07-test.txt"
 input     ← •path∾"/data/07.txt"
 
 # Parsing
-Parse ← s.Ints¨•file.Lines
+Parse ← s.Nats¨•file.Lines
 
 # Solutions
 Value ← {

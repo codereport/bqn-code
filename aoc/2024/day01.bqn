@@ -5,7 +5,7 @@ testInput ← •path∾"/data/01-test.txt"
 input     ← •path∾"/data/01.txt"
 
 # Parsing
-Parse ← >·s.Ints¨•file.Lines
+Parse ← >·s.Nats¨•file.Lines
 
 # Solutions
 A ← +´·|·-˝·∧˘⍉

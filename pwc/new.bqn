@@ -4,11 +4,11 @@ nl      ← ⟨@+10⟩
 q       ← @+34
 f       ← "Function"
 comment ← "# Link: https://theweeklychallenge.org/blog/perl-weekly-challenge-"
-include ← "⟨UnitTest⟩ ⇐ •Import "∾q∾"/home/cph/bqn-test/test.bqn"∾q
+include ← "u ⇐ •Import "∾q∾"/home/cph/bqn-test/test.bqn"∾q
 
 CreateFiles ← {
   content ← comment∾𝕩∾nl∾nl∾include∾nl∾nl∾f∾" ← ⊢"∾nl∾nl
-  content ↩ content∾"# Tests"∾nl∾"UnitTest ("∾f∾" ) ≡ "∾nl
+  content ↩ content∾"# Tests"∾nl∾"u.UnitTest ("∾f∾" 0) ≡ 1"∾nl
   •file.Chars⟜content¨ (∾⟜"-1.bqn"⋈∾⟜"-2.bqn")𝕩
 }
 

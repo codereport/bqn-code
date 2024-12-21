@@ -10,21 +10,16 @@ dim‿n ← ⟨⟨7,7⟩,12⟩
 # dim‿n ← ⟨⟨71,71⟩,1024⟩
 
 # Parsing
-Parse ← { +´{ ¯1⌾(𝕩⊸⊑)dim⥊0 }¨n↑s.Nats¨•file.Lines𝕩 }
+Block   ← { ¯1⌾(𝕨⊸⊑)𝕩 }
+Parse   ← s.Nats¨•file.Lines
+Gridify ← (+´Block⟜(dim⥊0)¨)↑
 
 # Solutions
-Flood ← { 𝕊g‿up:
-    { 0=≠up    ? g ; pos‿n ← ⊑up
-    { 0≠pos⊸⊑g ? g‿(1↓up) ;
-    g   ↩ (n⊸+)⌾(pos⊸⊑)g
-    adj ← ⋈⟜(n+1)¨(0=g⊑˜⊢)⊸/g⊸h.Ib¨⊸/pos⊸+¨h.del4
-    g‿(adj∾˜1↓up) }}
-}
-A ← 1-˜(dim-1)⊑{ ⊑Flood •_while_ (×∘≠⊢´) 𝕩‿⟨⟨0,0⟩‿1⟩ }
-B ← ⊢
+A ← { 1-˜(dim-1)⊑0‿0 h.FloodFill𝕩 }
+B ← { 𝕩⊑˜1-˜1⊸+•_while_((¯1≠A)𝕩Gridify˜⊢)n }
 
 # Tests
-u.UnitTest (A Parse testInput) ≡ 22
-# u.UnitTest (A Parse input)     ≡ 250
-# u.UnitTest (B Parse testInput) ≡ 1
-# u.UnitTest (B Parse input)     ≡ 1
+u.UnitTest (A n⊸Gridify∘Parse testInput) ≡ 22
+# u.UnitTest (A n⊸Gridify∘Parse input)   ≡ 250
+u.UnitTest (B Parse testInput) ≡ ⟨6,1⟩
+# u.UnitTest (B Parse input)   ≡ ⟨56,8⟩

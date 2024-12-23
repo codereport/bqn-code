@@ -8,9 +8,8 @@ input     ← •path∾"/data/19.txt"
 # Parsing
 Parse ← { a‿b ← s.Lines2 •file.Chars𝕩 ⋄ ⟨", "s.Split a, s.Lines b⟩}
 
-dp ← ⟨""⟩•HashMap⟨1⟩
-
 # Solutions
+dp   ← ⟨""⟩•HashMap⟨1⟩
 Ip   ← { dp.Has 𝕩 ? dp.Get 𝕩 ; r⊣𝕩dp.Set r ← +´𝕨⊸𝕊¨↓⟜𝕩¨≠¨𝕨/˜fn.IsPrefix⟜𝕩¨𝕨 }
 Ways ← { 𝕊p‿d: p⊸Ip¨d }
 A    ← +´·×Ways

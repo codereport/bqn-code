@@ -1,5 +1,6 @@
-_Tri      ⇐ {(<˘𝔽⌜˜𝕩)↓˜¨1+↕≠𝕩} # Triangle Product
-_TriId    ⇐ {(<˘𝔽⌜˜𝕩)↓˜¨↕≠𝕩}   # Triangle Product (including diagonal)
+_Tri      ⇐ {(<˘𝔽⌜˜𝕩)↓˜¨1+↕≠𝕩}       # Triangle Product
+_TriId    ⇐ {(<˘𝔽⌜˜𝕩)↓˜¨↕≠𝕩}         # Triangle Product (including diagonal)
+_Xt       ⇐ { m ← 𝕨⌈○≠𝕩 ⋄ 𝔽´m⊸↑¨𝕨‿𝕩} # Extend
 _AdjMap   ⇐ {¯1⊸↓𝔽1⊸↓}
 _ChunkBy  ⇐ {(+`0∾·¬𝔽_AdjMap)⊸(⊐⊸⊔)}
 _ChunkKey ⇐ {(0∾+`Differ𝔽¨𝕩)⊔𝕩}

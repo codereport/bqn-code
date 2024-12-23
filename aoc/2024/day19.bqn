@@ -8,13 +8,16 @@ input     ← •path∾"/data/19.txt"
 # Parsing
 Parse ← { a‿b ← s.Lines2 •file.Chars𝕩 ⋄ ⟨", "s.Split a, s.Lines b⟩}
 
+dp ← ⟨""⟩•HashMap⟨1⟩
+
 # Solutions
-Ip ← { 0=≠𝕩 ? 1 ; m ← fn.IsPrefix⟜𝕩¨𝕨 ⋄ ∨´m ? ∨´𝕨⊸𝕊¨↓⟜𝕩¨(≠¨m/𝕨) ; 0 } # is possible
-A  ← { 𝕊p‿d: +´p⊸IsPossible¨d }
-B  ← ⊢
+Ip   ← { dp.Has 𝕩 ? dp.Get 𝕩 ; r⊣𝕩dp.Set r ← +´𝕨⊸𝕊¨↓⟜𝕩¨≠¨𝕨/˜fn.IsPrefix⟜𝕩¨𝕨 }
+Ways ← { 𝕊p‿d: p⊸Ip¨d }
+A    ← +´·×Ways
+B    ← +´Ways
 
 # Tests
 u.UnitTest (A Parse testInput) ≡ 6
-# u.UnitTest (A Parse input)     ≡ 1
-# u.UnitTest (B Parse testInput) ≡ 1
-# u.UnitTest (B Parse input)     ≡ 1
+# u.UnitTest (A Parse input)     ≡ 260
+u.UnitTest (B Parse testInput) ≡ 16
+# u.UnitTest (B Parse input)     ≡ 639963796864990

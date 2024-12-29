@@ -1,4 +1,4 @@
-# Link:
+# Link: https://leetcode.com/problems/minimum-operations-to-make-columns-strictly-increasing
 
 u ⇐ •Import "/home/cph/bqn-test/test.bqn"
 

@@ -5,6 +5,7 @@ _AdjMap   ⇐ {¯1⊸↓𝔽1⊸↓}
 _ChunkBy  ⇐ {(+`0∾·¬𝔽_AdjMap)⊸(⊐⊸⊔)}
 _ChunkKey ⇐ {(0∾+`Differ𝔽¨𝕩)⊔𝕩}
 
+Chunk  ⇐ {1↓𝕩⊔˜+`0=𝕨|↕≠𝕩}
 Pairs  ⇐ ∾⋈_Tri˜
 Deltas ⇐ -˜ _AdjMap
 Differ ⇐ ≠ _AdjMap

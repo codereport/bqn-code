@@ -3,7 +3,7 @@
 u ⇐ •Import "/home/cph/bqn-test/test.bqn"
 
 MinimumOperations  ← { +´⥊+⟜1⊸⌈`⊸-𝕩 } # Explicit
-MinimumOperations2 ← +´·⥊+⟜1⊸⌈`⊸-     # Implicit
+MinimumOperations2 ← +´·⥊+⟜1⊸⌈`⊸-     # Tacit
 
 # Tests
 u.UnitTest (MinimumOperations  ∘‿2⥊3‿2‿1‿3‿3‿4‿0‿1)   ≡ 15

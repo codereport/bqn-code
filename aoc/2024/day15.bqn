@@ -1,6 +1,5 @@
 u  ⇐ •Import "/home/cph/bqn-test/test.bqn"
 s  ⇐ •Import "/home/cph/bqn-code/lib/string.bqn"
-h  ⇐ •Import "/home/cph/bqn-code/lib/helper.bqn"
 fn ⇐ •Import "/home/cph/bqn-code/lib/fun.bqn"
 
 miniInput ← •path∾"/data/15-mini.txt"
@@ -8,7 +7,7 @@ testInput ← •path∾"/data/15-test.txt"
 input     ← •path∾"/data/15.txt"
 
 # Parsing
-Parse ← { (>∘s.Lines⊸⋈⟜(∾·s.Lines ¯1⊸↓))´s.Lines2 •file.Chars 𝕩 }
+Parse ← { (>∘s.Lines⊸⋈⟜(∾·s.Lines ¯1⊸↓))´s.Lines2•file.Chars𝕩 }
 
 # Solutions
 rs   ← ⟨⊢,⌽∘⍉,⌽∘⍉⍟2,⌽∘⍉⍟3⟩

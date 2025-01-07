@@ -1,0 +1,6 @@
+AlignAssignment: true
+AlignComments: true
+ColumnLimit: 100
+IndentSpace: 2
+SortExports: true
+SortImports: true

@@ -26,7 +26,7 @@ This repository is a compilation of [BQN](https://mlochbaum.github.io/BQN) solut
 
 ### Other Repositories (BQN%/Rank)
 
-* [LeetCode](https://github.com/codereport/LeetCode) (17.8%/🥈)
+* [LeetCode](https://github.com/codereport/LeetCode) (18.9%/🥈)
 * [top10](https://github.com/codereport/top10) (9.9%/🥉)
 * [Advent-of-Code-2022](https://github.com/codereport/Advent-of-Code-2022) (42.5%/🥇)
 * [Advent-of-Code-2023](https://github.com/codereport/Advent-of-Code-2023) (54.1%/🥇)
@@ -44,7 +44,9 @@ This repository is a compilation of [BQN](https://mlochbaum.github.io/BQN) solut
 ### My Libraries (WIP)
 
 * [binary.bqn](https://github.com/codereport/bqn-code/blob/main/lib/binary.bqn)
+* [color.bqn](https://github.com/codereport/bqn-code/blob/main/lib/color.bqn)
+* [file_system.bqn](https://github.com/codereport/bqn-code/blob/main/lib/file_system.bqn)
 * [fun.bqn](https://github.com/codereport/bqn-code/blob/main/lib/fun.bqn) (functions and modifiers)
 * [math.bqn](https://github.com/codereport/bqn-code/blob/main/lib/math.bqn)
 * [string.bqn](https://github.com/codereport/bqn-code/blob/main/lib/string.bqn)
-* [file_system.bqn](https://github.com/codereport/bqn-code/blob/main/lib/file_system.bqn)
+* [terminal.bqn](https://github.com/codereport/bqn-code/blob/main/lib/terminal.bqn)

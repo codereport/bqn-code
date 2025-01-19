@@ -1,4 +1,4 @@
-# Link: https://theweeklychallenge.org/blog/perl-weekly-challenge-304
+# Link: https://leetcode.com/problems/maximum-difference-between-adjacent-elements-in-a-circular-array
 
 u  ⇐ •Import "/home/cph/bqn-test/test.bqn"
 fn ⇐ •Import "/home/cph/bqn-code/lib/fun.bqn"

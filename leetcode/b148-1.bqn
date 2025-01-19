@@ -1,0 +1,13 @@
+# Link: https://theweeklychallenge.org/blog/perl-weekly-challenge-304
+
+u  ⇐ •Import "/home/cph/bqn-test/test.bqn"
+fn ⇐ •Import "/home/cph/bqn-code/lib/fun.bqn"
+
+MaxAdjacentDistance  ← ⌈´·|·fn.Deltas(1+≠)⊸⥊   # Tacit
+MaxAdjacentDistance2 ← { ⌈´|fn.Deltas𝕩⥊˜1+≠𝕩 } # Explicit
+
+# Tests
+u.UnitTest (MaxAdjacentDistance  1‿2‿4)     ≡ 3
+u.UnitTest (MaxAdjacentDistance  ¯5‿¯10‿¯5) ≡ 5
+u.UnitTest (MaxAdjacentDistance2 1‿2‿4)     ≡ 3
+u.UnitTest (MaxAdjacentDistance2 ¯5‿¯10‿¯5) ≡ 5

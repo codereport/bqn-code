@@ -1,0 +1,111 @@
+1: Easy as 1-2-3
+Write some APL code that uses ⍳ to get the numbers from 1 to 12. The result should be 1 2 3 4 5 6 7 8 9 10 11 12
+
+----
+2: I’m Larger than You
+Write some APL code that uses a single ⌈ to change the numbers 31 41 59 26 into 50 50 59 50.
+
+----
+3: Where Are You?
+Write some APL code using Equal To that shows where the Rs are in 'RASPBERRY'. The answer should be 1 0 0 0 0 0 1 1 0.
+
+----
+4: The Greatest Number
+Using Maximum (⌈) from problem 2, find the largest number in the list 2 7 1 8 2 8 1 8 2 8 4 6. The result should be 8.
+
+----
+5: Cards on the Table
+Using Table (∘.), create an addition table (plus table) for the numbers 3, 1, and 4. The result should look like this:
+
+6 4 7
+4 2 5
+7 5 8
+
+----
+6: Identity Matrix
+Using round brackets, ⍳ (iota from problem 1), =, and ∘. (Table from problem 5), create a 5-by-5 table that has 1s on the diagonal from the top left to the bottom right, with all other numbers being 0s. This is known as an identity matrix of size 5 and looks like this:
+
+1 0 0 0 0
+0 1 0 0 0
+0 0 1 0 0
+0 0 0 1 0
+0 0 0 0 1
+
+----
+7: More Identity Matrices
+Using what you learnt in problem 6, write a function that gives an identity matrix of the given size. For example:
+
+      {answer} 5
+1 0 0 0 0
+0 1 0 0 0
+0 0 1 0 0
+0 0 0 1 0
+0 0 0 0 1
+
+      {answer} 2
+1 0
+0 1
+
+      {answer} 6
+1 0 0 0 0 0
+0 1 0 0 0 0
+0 0 1 0 0 0
+0 0 0 1 0 0
+0 0 0 0 1 0
+0 0 0 0 0 1
+
+----
+8: Spell it Out
+Write a function that takes a list of numbers and returns a text that consists of the corresponding uppercase letters from the English alphabet. For example:
+
+      {answer} 1 2 3 2 1
+ABCBA
+
+      {answer} 1 16 12
+APL
+
+      {answer} 4 25 1 12 15 7
+DYALOG
+
+----
+9: How Many of Each?
+Using + with / and ∘. with = (Equal To from problem 3), write a function that takes an uppercase text and, for each of the three letters A, P, and L, counts how many there are in the text. For example:
+
+
+      {answer} 'DYALOG APL'
+2 1 2
+This tells us that 'DYALOG APL' has 2 As, 1 P, and 2 Ls.
+
+      {answer} 'MISSISSIPPI'
+0 2 0
+
+      {answer} 'THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG!'
+1 1 1
+
+----
+10: Histogram
+Using everything that you’ve learnt so far, write a function that takes a list of numbers between 1 and 6 (representing dice throws) and draws a histogram (bar chart) showing how many times each number was thrown. Use dashes (-) to show how many times each number was thrown, with the number of 1s shown on the first line, the number of 2s shown on the second line, and so on. Use spaces ( ) to fill out the table so it becomes rectangular. For example:
+
+      {answer} 6 2 1 3 5 6 6 4 1 2
+-- 
+-- 
+-  
+-  
+-  
+---
+
+      {answer} 3 4 3 4 6
+  
+  
+--
+--
+  
+- 
+
+      {answer} 5 3 6 6 3 5 5 4 1 6 1 6 4 6 3 2 3 2 6 3 1 4 4 3 5
+---   
+--    
+------
+----  
+----  
+------

@@ -1,6 +1,6 @@
 # Link: https://theweeklychallenge.org/blog/perl-weekly-challenge-313
 
-u  ⇐ •Import "/home/cph/bqn-test/test.bqn"
+u ⇐ •Import "/home/cph/bqn-test/test.bqn"
 
 ReverseLetters ← { ⌽⌾((𝕩∊⥊"Aa"+⌜↕26)⊸/)𝕩 }
 

@@ -10,6 +10,7 @@ Pairs  ⇐ ∾⋈_Tri˜
 Deltas ⇐ -˜ _AdjMap
 Differ ⇐ ≠ _AdjMap
 Group  ⇐ = _ChunkBy
+Uniq   ⇐ ⊑¨Group       # from C++
 Rle    ⇐ >·(⊑⋈≠)¨Group
 Freq   ⇐ Rle∧
 I      ⇐ /○⥊⟜(↕≢)      # indices for higher ranks

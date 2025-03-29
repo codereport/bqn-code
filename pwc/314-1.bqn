@@ -14,4 +14,3 @@ EqualStrings ← {
 u.UnitTest (EqualStrings "abc"‿"abb"‿"ab")  ≡  2
 u.UnitTest (EqualStrings "ayz"‿"cyz"‿"xyz") ≡ ¯1
 u.UnitTest (EqualStrings "yza"‿"yzb"‿"yzc") ≡  3
-

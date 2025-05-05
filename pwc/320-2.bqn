@@ -1,7 +1,6 @@
 # Link: https://theweeklychallenge.org/blog/perl-weekly-challenge-320
 
-u  ⇐ •Import "/home/cph/bqn-test/test.bqn"
-fn ⇐ •Import "/home/cph/bqn-code/lib/fun.bqn"
+u ⇐ •Import "/home/cph/bqn-test/test.bqn"
 b ⇐ •Import "/home/cph/bqn-code/lib/binary.bqn"
 
 SumDifference ← |(+´·∾b.Digits¨)-+´

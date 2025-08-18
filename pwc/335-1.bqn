@@ -1,6 +1,6 @@
 # Link: https://theweeklychallenge.org/blog/perl-weekly-challenge-335
 
-u  ⇐ •Import "/home/cph/bqn-test/test.bqn"
+u ⇐ •Import "/home/cph/bqn-test/test.bqn"
 
 a ← 'a'+↕25
 CommonCharacters ← a/˜·⌊´(+´˘a⊸(=⌜))¨

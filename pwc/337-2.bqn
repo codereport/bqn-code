@@ -5,7 +5,7 @@ u ⇐ •Import "/home/cph/bqn-test/test.bqn"
 Row       ← { 1⊸+⌾(𝕨⊸⊏)𝕩 }
 Col       ← ⍉Row⟜⍉
 RowCol    ← { r‿c𝕊𝕩: r Row c Col 𝕩 }
-OddMatrix ← { +´2|⥊(𝕨⥊0) RowCol´ 𝕩}
+OddMatrix ← { +´2|⥊(𝕨⥊0) RowCol´ 𝕩 }
 
 # Tests
 u.UnitTest (2‿3 OddMatrix ⟨⟨0,1⟩,⟨1,1⟩⟩)             ≡ 6

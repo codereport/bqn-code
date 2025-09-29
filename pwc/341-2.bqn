@@ -1,0 +1,12 @@
+# Link: https://theweeklychallenge.org/blog/perl-weekly-challenge-341
+
+u ⇐ •Import "/home/cph/bqn-test/test.bqn"
+
+ReversePrefix ← { ⌽⌾((1+⊑/𝕨=𝕩)⊸↑)𝕩 }
+
+# Tests
+u.UnitTest ('g' ReversePrefix "programming") ≡ "gorpramming"
+u.UnitTest ('h' ReversePrefix "hello")       ≡ "hello"
+u.UnitTest ('h' ReversePrefix "abcdefghij")  ≡ "hgfedcbaij"
+u.UnitTest ('s' ReversePrefix "reverse")     ≡ "srevere"
+u.UnitTest ('r' ReversePrefix "perl")        ≡ "repl"

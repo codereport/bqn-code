@@ -1,7 +1,6 @@
 # Link: https://theweeklychallenge.org/blog/perl-weekly-challenge-346
 
 u  ⇐ •Import "/home/cph/bqn-test/test.bqn"
-fn ⇐ •Import "/home/cph/bqn-code/lib/fun.bqn"
 
 LongestParentheses ← ⌈´·((((+´×∧´)0⊸≤)×(0=⊑∘⌽))·+`·-˝"()"=⌜⊢)¨·∾·(¯1↓↓)¨1↓↑
 

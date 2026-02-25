@@ -9,11 +9,15 @@ input     ← •path∾"/data/03.txt"
 Parse ← -⟜'0'¨•file.Lines
 
 # Solutions
-A  ← +´{⌈´∾{+´10‿1×𝕨‿𝕩} fn._Tri 𝕩 }¨
-B  ← ⊢
+# A  ← +´{⌈´∾{+´10‿1×𝕨‿𝕩} fn._Tri 𝕩 }¨ # original A
+M   ← ⊑⌈´⊸=⊸/⟜(⋈¨⟜(↕≠)) # Max with index
+N   ← 10⊸×⊸+˜´⌽         # Number (from digits)
+Sol ← { +´𝕨{ N⊑⟨⟩‿𝕩{ 𝕨𝕊r‿l: m‿i ← M𝕨↓l ⋄ (r∾m)⋈l↓˜1+i }´-↕𝕨 }¨𝕩 }
+A   ←  2⊸Sol
+B   ← 12⊸Sol
 
 # Tests
 u.UnitTest (A Parse testInput) ≡ 357
-u.UnitTest (A Parse input)     ≡ 21139440284
-# u.UnitTest (B Parse testInput) ≡ 4174379265
-# u.UnitTest (B Parse input)   ≡ 23150395
+u.UnitTest (A Parse input)     ≡ 17694
+u.UnitTest (B Parse testInput) ≡ 3121910778619
+u.UnitTest (B Parse input)     ≡ 175659236361660
